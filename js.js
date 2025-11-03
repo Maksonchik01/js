@@ -1,9 +1,9 @@
-let name = "Maksym";
-let result = 55 + 55 + name;
-console.log(result);
-let result2 = "apple" > "w";
-console.log(result2);
-let result3 = 55 === "55";
+// let name = "Maksym";
+// let result = 55 + 55 + name;
+// console.log(result);
+// let result2 = "apple" > "w";
+// console.log(result2);
+// let result3 = 55 === "55";
 // let age = prompt("Ваш Вік ?");
 // if (age >= 18) {
 //     alert ("Вітаємо")
@@ -69,24 +69,79 @@ let result3 = 55 === "55";
 // } else {
 //     alert (`${client - (client * 0.15)}`)
 // }
-let user = prompt ('Тип підписки Basic, Standard, Premium');
-let age = prompt ('Ваш вік')
-if (user === "Basic" ) {
-    if (age >= 60) {
-        alert ('Вартість 80грн')
-    }else {
- alert ('Вартість 100грн')
-    }
-}else if (user === "Standard"){
-if( age >= 60) {
-    alert ('200грн')
-} else {
-    alert ('250грн')
-}
-} else if ( user === "Premium") {
-    if (age >= 60) {
-        alert ('400')
-    }else {
-        alert('500')
-    }
-}
+// let user = prompt ('Тип підписки Basic, Standard, Premium');
+// let age = prompt ('Ваш вік')
+// if (user === "Basic" ) {
+//     if (age >= 60) {
+//         alert ('Вартість 80грн')
+//     }else {
+//  alert ('Вартість 100грн')
+//     }
+// }else if (user === "Standard"){
+// if( age >= 60) {
+//     alert ('200грн')
+// } else {
+//     alert ('250грн')
+// }
+// } else if ( user === "Premium") {
+//     if (age >= 60) {
+//         alert ('400')
+//     }else {
+//         alert('500')
+//     }
+// }
+// let str = "Дрібні їжачки їли їжу";
+// let result = 0;
+// for (let i = 0; i < str.length; i++) {
+//     if (str[i] === "і") {
+//         result += 1;
+//     }
+// }
+// alert (result)
+// let str = "Привіт. Як справи. Все добре.";
+// let result = 0;
+// for (let i = 0; i < str.length; i++) {
+//     if (str[i] === "." ) {
+//         result += 1
+//     }
+// }
+// alert (result)
+
+// let str = "Це рядок із пробілами";
+// let result = "";
+// for (let i = 0; i < str.length; i++) {
+
+// if (str[i] !== " " ) {
+//     result += str[i]
+// }
+// }
+// alert (result)
+// let str = "Сьогодні чудовий сонячний день";
+// let result = 0;
+// for (let i = 0; i < str.length; i++) {
+//     if (str[i] === " " ){
+//         result += 1
+//     }
+// }
+// alert (result)
+// let str = "Це просто приклад рядка";
+// let result = "";
+// for (let i = 0; i < str.length; i++) {
+// if (str[i] === " ") {
+//     result += "-"
+// }else {
+//     result += str[i]
+// }
+// }
+// alert(result)
+// let str = "Привіт! Як справи! Все супер!";
+// let result = "";
+// for (let i = 0; i < str.length; i++) {
+//    if (str[i] === "!" ) {
+//     result += " "
+//    } else {
+//     result += str[i]
+//    }
+    
+// }
+// alert (result)
