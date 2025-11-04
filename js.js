@@ -145,3 +145,76 @@
     
 // }
 // alert (result)
+//  const arr = [4, 7, 1, 9, 3];
+//  let result = 0;
+//  for (let i = 0; i < arr.length; i++) {
+//     result += arr[i]
+//  }
+//  alert (result)
+// const arr1 = [4, 7, 1, 9, 3,2, 10];
+// let result = 0;
+// for (let i = 0; i < arr1.length; i++) {
+// if (arr1[i] % 2 === 0) {
+//     result += arr1[i]
+// }
+    
+// }
+// alert (result)
+// const arr = [1, 2, 3, 4, 5, 6]; 
+// let result = [];
+// for (let i = 0; i < arr.length; i++) {
+// result.push(arr[i] * 2)
+    
+// }
+// alert (result)
+// const fruits = ["kiwi", "pineapple", "mango", "grape"];
+// let result = [];
+// for (let i = 0; i < fruits.length; i++) {
+//     if (fruits[i] !== "kiwi")  {
+//         result.push(fruits[i])
+//     }
+// }
+// const arr = [5, 10, 14, 21, 18, 3, 20]; 
+// let result = [];
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] >= 10 && arr[i] <= 20) {
+//     result.push(arr[i])
+//     }
+// }
+// const mixed = ["js", "frontend",  "api",  "react",  "dom"];
+// let result = 0;
+// for (let i = 0; i < mixed.length; i++) {
+//     if (mixed[i].length >= 4) {
+//         result += 1
+//     }
+    
+// }
+
+// const mixed = [12, "sunshine", "car", false, "mountain", "sky"];
+// let result = [];
+// for (let i = 0; i < mixed.length; i++) {
+//     if (typeof mixed[i] === "string") {
+//         result.push(mixed[i])
+//     }
+    
+// }
+// alert (result)
+// const mixed = [10, "5", "abc", 30, null, undefined, 20, "7"];
+// let result = 0;
+// for (let i = 0; i < mixed.length; i++) {
+//    if (typeof mixed[i] === "number" ) {
+//     result += mixed[i]
+//    }
+    
+// }
+// alert(result)
+
+// const mixed = ["apple", 12, "banana", "kiwi", null, "plum"];
+// let result = 0;
+// for (let i = 0; i < mixed.length; i++) {
+// if (typeof mixed[i] === "string") {
+//     result += mixed[i].length
+// }
+    
+// }
+// alert (result)
