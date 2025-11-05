@@ -218,3 +218,56 @@
     
 // }
 // alert (result)
+// const mix = [2, "3", 5, null, true, 4, "hi"];
+// let result = 1;
+// for (let i = 0; i < mix.length; i++) {
+//     if (typeof mix[i] === "number") {
+//         result *= mix[i]
+//     }
+// }
+// alert (result)
+// const data = ["sun", "ocean", 45, "sky", true, "mountain"];
+// let result = 0;
+// for (let i = 0; i < data.length; i++) {
+//    if (typeof data[i] === "string" && data[i].length > 3) {
+//     result += 1
+//    }
+    
+// }
+// alert(result)
+// const mix = [null, 5, "a", null, true, 10];
+// for (let i = 0; i < mix.length; i++) {
+//   if ( mix[i] === null) {
+//     mix[i] = 0
+//   }
+    
+// }
+// console.log( mix);
+
+// const mix = [5, undefined, "hi", null, 8, undefined, true];
+// let result = [];
+// for (let i = 0; i < mix.length; i++) {
+//     if (mix[i] !== undefined) {
+//         result.push(mix[i])
+//     }
+    
+// }
+// alert (result)
+// const data = ["add", 5, "x", 10, "add", 3, 2, "add", 7];
+// let result = 0;
+// for (let i = 0; i < data.length; i++) {
+// if (typeof data[i] === "number" && data[i] > result) {
+//     result = data[i]
+// }
+    
+// }
+// alert (result)
+// const arr = ["hi", "sun", 5, null, "ok", "sky"];
+// let result = [];
+// for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === 'string' && arr[i].length > 2) {
+//         result.push(arr[i].toUpperCase())
+//     }
+    
+// }
+// alert (result)
