@@ -392,3 +392,29 @@
     
 // }
 // alert(result)
+
+// const arr = [1, 2, 3, 4, 5, 6, -5, 10, -2]
+// const arrMap = arr.map(el => el * 5);
+// // console.log(arrMap);
+// // const arrFilter = arr.filter(el => el > 3)
+// // console.log(arrFilter);
+// // const arrSome = arr.some(el => el > 3)
+// // console.log(arrSome);
+// // const arrEvery = arr.every(el => el > 3)
+// // console.log(arrEvery);
+// // const arrReduce = arr.reduce((acc, el)=> acc + el, "")
+// // console.log(arrReduce);
+// // const findArr = arr.find(el => el % 2 === 0)
+// // console.log(findArr);
+// // const sliceArr = arr.slice(0, 3)
+// // console.log(sliceArr);
+// // const reverseArr = arr.reverse()
+// // const spliceArr = arr.splice(0, 3)
+// // console.log(arr);
+// const sortArr = arr.sort((a, b) => a - b)
+// console.log(arr);
+
+const numbers = [10, -5, 7, -2, 0, 3];
+const numbersFilter = numbers.filter(el => el > 0)
+console.log(numbersFilter);
+
