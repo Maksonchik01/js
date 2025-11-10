@@ -414,7 +414,45 @@
 // const sortArr = arr.sort((a, b) => a - b)
 // console.log(arr);
 
-const numbers = [10, -5, 7, -2, 0, 3];
-const numbersFilter = numbers.filter(el => el > 0)
-console.log(numbersFilter);
+// const numbers = [10, -5, 7, -2, 0, 3];
+// const numbersFilter = numbers.filter(el => el > 0)
+// console.log(numbersFilter);
 
+
+
+// ДЗ
+
+// Отримай новий масив, у якому кожен елемент помножений на 5.
+
+const arr = [2, 4, 6, 8];
+const arrMap = arr.map(el => el * 5);
+console.log(arrMap);
+
+// Перевір, чи є хоча б одне парне число. Поверни булеве значення (true або false).
+
+const numbers = [1, 3, 7, 10, 5];
+const numbersSome = numbers.some(el => el % 2 === 0);
+console.log(numbersSome);
+
+// Створи новий масив, де тільки парні числа помножені на 2, а непарні залишилися без змін.
+
+const arr2 = [3, 8, 1, 10, 6, 5];
+const arr2Map = arr2.map(el => el % 2 === 0 &&  el * 2)
+console.log(arr2Map);
+
+//Залиш у масиві лише ті слова, які довші за 4 символи, і перетвори їх на великі літери.
+
+// const words = ["js", "frontend", "dom", "api", "react"];
+// for (let i = 0; i < words.length; i++) {
+//  if (words.length > 4 ) {
+//     words[i].toUpperCase([i])
+//  }
+    
+// }
+// console.log(words);
+
+//Видали всі нулі з масиву та виведи кількість елементів, що залишилися.
+
+const arr3 = [0, 5, 3, 0, 7, 9, 0];
+const arr3Filter =  arr3.filter(el => el > 0)
+console.log(arr3Filter);
