@@ -324,7 +324,7 @@
 // if (typeof mixed[i] === 'string') {
 //     result += mixed[i]
 // }
-    
+
 // }
 // const cities = ["Paris", "Berlin", "London", "Boston"];
 // let result = [];
@@ -332,7 +332,7 @@
 //     if (cities[i][0] === 'B') {
 //         result.push(cities[i])
 //     }
-    
+
 // }
 // alert(result)
 
@@ -342,7 +342,7 @@
 // if (nums[i] === 15) {
 //     result += i
 // }
-    
+
 // }
 // alert(result)
 
@@ -355,10 +355,9 @@
 //     } else if(typeof numbers[i] === 'number' && numbers[i] % 2 !== 0) {
 //         resultNum.push(numbers[i])
 //     }
-    
+
 // }
 // console.log(result, resultNum);
-
 
 // const arr = [4, -3, 7, -1, 0, 8];
 // let result = [];
@@ -368,7 +367,7 @@
 //   } else {
 //     result.push(arr[i])
 //   }
-    
+
 // }
 // alert(result)
 
@@ -378,7 +377,7 @@
 // if (i % 2 !== 0) {
 //     result += arr[i]
 // }
-    
+
 // }
 // alert (result)
 // const arr = [10, 3, 8, 5, 4];
@@ -389,7 +388,7 @@
 //   } else {
 //     result.push(arr[i])
 //   }
-    
+
 // }
 // alert(result)
 
@@ -418,41 +417,127 @@
 // const numbersFilter = numbers.filter(el => el > 0)
 // console.log(numbersFilter);
 
-
-
 // ДЗ
 
 // Отримай новий масив, у якому кожен елемент помножений на 5.
 
-const arr = [2, 4, 6, 8];
-const arrMap = arr.map(el => el * 5);
-console.log(arrMap);
+// const arr = [2, 4, 6, 8];
+// const arrMap = arr.map(el => el * 5);
+// console.log(arrMap);
 
-// Перевір, чи є хоча б одне парне число. Поверни булеве значення (true або false).
+// // Перевір, чи є хоча б одне парне число. Поверни булеве значення (true або false).
 
-const numbers = [1, 3, 7, 10, 5];
-const numbersSome = numbers.some(el => el % 2 === 0);
-console.log(numbersSome);
+// const numbers = [1, 3, 7, 10, 5];
+// const numbersSome = numbers.some(el => el % 2 === 0);
+// console.log(numbersSome);
 
-// Створи новий масив, де тільки парні числа помножені на 2, а непарні залишилися без змін.
+// // Створи новий масив, де тільки парні числа помножені на 2, а непарні залишилися без змін.
 
-const arr2 = [3, 8, 1, 10, 6, 5];
-const arr2Map = arr2.map(el => el % 2 === 0 &&  el * 2)
-console.log(arr2Map);
+// const arr2 = [3, 8, 1, 10, 6, 5];
+// const arr2Map = arr2.map(el => el % 2 === 0 ?  el * 2 : el)
+// console.log(arr2Map);
 
-//Залиш у масиві лише ті слова, які довші за 4 символи, і перетвори їх на великі літери.
+// //Залиш у масиві лише ті слова, які довші за 4 символи, і перетвори їх на великі літери.
+
+// // const words = ["js", "frontend", "dom", "api", "react"];
+// // let result = []
+// // for (let i = 0; i < words.length; i++) {
+// //  if (words[i].length > 4 ) {
+// //     result.push(words[i].toUpperCase([i]))
+// //  }
+
+// //  }
+// // console.log(result);
+
+// //Залиш у масиві лише ті слова, які довші за 4 символи, і перетвори їх на великі літери.
 
 // const words = ["js", "frontend", "dom", "api", "react"];
-// for (let i = 0; i < words.length; i++) {
-//  if (words.length > 4 ) {
-//     words[i].toUpperCase([i])
-//  }
-    
-// }
-// console.log(words);
+// const wordsFilter = words.filter(el => el.length > 4).map(el => el.toUpperCase())
+// console.log(wordsFilter);
 
-//Видали всі нулі з масиву та виведи кількість елементів, що залишилися.
+// //Видали всі нулі з масиву та виведи кількість елементів, що залишилися.
 
-const arr3 = [0, 5, 3, 0, 7, 9, 0];
-const arr3Filter =  arr3.filter(el => el > 0)
-console.log(arr3Filter);
+// const arr3 = [0, 5, 3, 0, 7, 9, 0];
+// const arr3Filter =  arr3.filter(el => el > 0)
+// console.log(arr3Filter);
+
+// const numbers = [3, 7, -2, 8, -5];
+// const numbersFilter = numbers.filter(el => el > 0).reduce((acc, el)=> acc + el, 0)
+// console.log(numbersFilter);
+
+// const words = ["сонце", "ліс", "дощ", "вода"];
+// const wordsMap = words.map(el => el.length)
+// console.log(wordsMap);
+
+// const numbers = [0, 3, 0, 4, 5, 0];
+// const numbersFilter = numbers.filter(el => el === 0 ).length
+
+// const numbers = [10, 20, 30, 40];
+// const numbersReduce = numbers.reduce((acc, el)=> acc + el, 0) / numbers.length
+// console.log(numbersReduce);
+
+// const arr = ["hi", "sun", 5, null, "ok", "sky"];
+// const arrFilter = arr.filter(el => typeof el === 'string').map(el => el.length > 2 ? el.toUpperCase() : el)
+// console.log(arrFilter);
+
+// const numbers = [10, 2, 33, 4, 21, 8];
+// const numbersSort = numbers.sort((a, b)=> a - b ).slice(0, 3)
+// console.log(numbersSort);
+
+// const nums = [10, 5, 15, 8, 3];
+// const numsFindIndex = nums.findIndex(el => el === 15) 
+// console.log(numsFindIndex);
+
+//ДЗ
+
+//Є масив булевих значень. Перетвори його в масив чисел.
+
+// const flags = [true, false, true, true, false];
+// const flagsMap = flags.map(Number); 
+// console.log(flagsMap);
+
+//Є змішаний масив. Залиш у ньому тільки числа.
+
+// const arr = ["кіт", "собака", 42, "вода", true, "море"];
+// const arrFilter = arr.filter((el) => typeof el === "number");
+// console.log(arrFilter);
+
+//Порахуй кількість чисел, більших за 10
+
+// const numbers = [2, 15, 8, 22, 11, 5];
+// const numbersFilter = numbers
+//   .filter(el => el >= 10).length
+// console.log(numbersFilter);
+
+
+//Порахуй суму тільки позитивних чисел
+
+// const numbers = [-5, 10, -2, 8, 3];
+// const numbersFilter = numbers.filter(el => el > 0).reduce((acc, el)=> acc + el, 0)
+// console.log(numbersFilter);
+
+//Є масив чисел. Знайди середнє арифметичне тільки непарних.
+
+// const numbers = [3, 8, 5, 12, 7, 10];
+// const numbersReduce = numbers.filter(el => el % 2 !== 0).reduce((acc, el)=> acc + el, 0) / numbers.length
+// console.log(numbersReduce);
+
+// Є масив чисел. Розверни його й отримай перші три елементи.
+
+// const numbers = [10, 20, 30, 40, 50];
+// const numbersReverse = numbers.reverse().slice(0, 3)
+// console.log(numbersReverse);
+
+
+// const arr = [10, "5", "15", 20, "30"];
+// const arrFilter = arr.filter(el => typeof el === 'string').map(el => Number(el)).reduce((acc, el)=> acc + el, 0)
+// console.log(arrFilter);
+
+// const numbers = [2, 3, 5, 6, 7];
+// const numbersFilter = numbers.filter(el => el % 2 !== 0).reduce((acc, el)=> acc * el, 1)
+// console.log(numbersFilter);
+
+// const numbers = [10, 20, 30, 40, 50];
+// const numbersReduce = numbers.reduce((acc, el)=> acc + el, 0) / numbers.length 
+// const numbersFilter = numbers.filter(el => el > numbersReduce).length
+// console.log(numbersFilter);
