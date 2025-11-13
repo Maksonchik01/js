@@ -541,3 +541,42 @@
 // const numbersReduce = numbers.reduce((acc, el)=> acc + el, 0) / numbers.length 
 // const numbersFilter = numbers.filter(el => el > numbersReduce).length
 // console.log(numbersFilter);
+
+
+//Є масив слів. Створи новий масив, що містить лише перші літери кожного слова.
+
+// const words = ["кіт", "дерево", "сонце", "вода"];
+// const wordsMap = words.map(el => el[0])
+// console.log(wordsMap);
+
+// const arr = [4, -3, 9, -1, 0, 7];
+// const arrMap = arr.map(el => el < 0 ? 0 : el)
+// console.log(arrMap);
+
+// const arr = [10, 20, 30, 40, 50];
+// const arrReduce = arr.reduce((acc, el)=> acc + el, 0) / arr.length
+// const arrFilter = arr.filter(el => el > arrReduce).reduce((acc, el)=> acc + el, 0)
+// console.log(arrFilter);
+
+// const words = ["вода", "трава", "море"];
+// const wordsEvery = words.every(el => el.includes("а"))
+// console.log(wordsEvery);
+
+
+// const numbers = [2, 3, 5, 6, 7];
+// const numbersFilter = numbers.filter(el => el % 2 !== 0).reduce((acc, el)=> acc * el, 1)
+// console.log(numbersFilter);
+
+
+// const arr = [10, "5", "15", 20, "30"];
+// const arrFilter = arr.filter(el => typeof el === "string").map(el => Number(el)).reduce((acc, el)=> acc + el, 0)
+// console.log(arrFilter);
+
+
+// const arr = [4, -3, 9, -1, 0, 7];
+// const arrSort = arr.sort((a, b)=> a - b).slice(0, 3)
+// console.log(arrSort);
+
+// const arr = ["кіт", "собака", 42, "вода", true, "море"]
+// const arrFilter = arr.filter(el => typeof el === "string").reduce((acc, el)=> acc + el.length, 0)
+// console.log(arrFilter);
