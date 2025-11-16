@@ -580,3 +580,72 @@
 // const arr = ["кіт", "собака", 42, "вода", true, "море"]
 // const arrFilter = arr.filter(el => typeof el === "string").reduce((acc, el)=> acc + el.length, 0)
 // console.log(arrFilter);
+
+
+// const obj = {
+// name: "Maksym",
+// age: 19,
+// country: "Ukraine"
+// }
+// obj.age = 21
+// console.log(obj.name);
+
+// const prices = { apple: 20, cherry: 40, mango: 50 };
+// let sum = 0
+// for (const key in prices) { 
+//  sum += prices[key] 
+// }
+// console.log(sum);
+
+// const user = { name: "Ivan", age: 25, city: "Lviv" };
+// let sum = 0;
+// for (const key in user) {
+// sum += 1
+// }
+// console.log(sum);
+
+// const user = { name: "Ivan", age: 25, city: "Lviv" };
+// let userObj = {};
+// for (const key in user) {
+//     if (key.length > 3) {
+//         userObj[key] = user[key]
+//     }
+    
+// }
+// console.log(userObj);
+
+// const user = { login: "root", password: "1234", role: "admin" };
+// let userObj = {};
+// for (const key in user) {
+//     if (key !== "password") {
+//         userObj[key] = user[key]
+//     }
+// }
+// console.log(userObj);
+
+// const data = { a: 1, b: "hi", c: 5, d: true, e: 9 };
+// let dataObj = {};
+// for (const key in data) {
+// if (typeof data[key] === "number" || typeof data[key] === "boolean") {
+//     dataObj[key] = data[key]
+// }
+    
+// }
+// console.log(dataObj);
+
+// const obj = { city: "Kyiv", street: "Khreshchatyk", code: "UA" };
+// let objNew = {};
+// for (const key in obj) {
+//     objNew[key] = obj[key].length
+    
+// }
+// console.log(objNew);
+
+// const flags = { a: true, b: false, c: true, d: true, e: false };
+// let flagsSum = 0;
+// for (const key in flags) {
+//     if (flags[key] === true) {
+//         flagsSum += 1
+//     }
+// }
+// console.log(flagsSum);
