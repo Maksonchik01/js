@@ -821,3 +821,77 @@
     
 // }
 // console.log(objNew);
+
+
+// const cart = {
+//   apple: 15,
+//   banana: 20,
+//   milk: 35,
+// };
+// let cartTotal = 0;
+// for (const key in cart) {
+// cartTotal += cart[key]
+    
+// }
+// console.log(cartTotal);
+
+// const person = {
+//   name: "Ivan",
+//   city: "Lviv",
+//   age: 28,
+// }
+// const personNew = {};
+// for (const key in person) {
+// personNew[key.toUpperCase()] = person[key]
+// }
+// console.log(personNew);
+
+// const data = {
+//   a: "red",
+//   b: "green",
+//   c: "black",
+//   d: 120,
+// };
+// const dataNew = {};
+// for (const key in data) {
+//   if (typeof data[key] === "string") {
+//     dataNew[data[key]] = key
+//   }else {
+//     dataNew[key] = data[key]
+//   }
+    
+// }
+// console.log(dataNew);
+
+// const settings = {
+//   darkMode: true,
+//   ads: false,
+//   volume: 80,
+//   username: "user123",
+// };
+// const settingsNew = {};
+// for (const key in settings) {
+//    if (typeof settings[key] === "boolean") {
+//     settingsNew[key] = "BOOL"
+//    } else{
+//     settingsNew[key] = settings[key]
+//    }
+// }
+// console.log(settingsNew);
+
+// const scores = {
+//   math: 80,
+//   physics: 92,
+//   english: 75,
+// username: "user123",
+//  ads: false,
+// };
+// let scoresNew = 0;
+// for (const key in scores) {
+
+//     if (typeof scores[key] === "number" && scores[key] > scoresNew) {
+//         scoresNew = scores[key] 
+//     }
+// }
+// console.log(scoresNew);
+
