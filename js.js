@@ -649,3 +649,175 @@
 //     }
 // }
 // console.log(flagsSum);
+
+// const product = {
+//   title: "Телефон",
+//   price: 12000,
+//   color: "black",
+//   count: 4,
+// };
+// const productNew = {};
+// for (const key in product) {
+// if (typeof product[key] === "string") {
+//     productNew[key] = product[key]
+// }
+// }
+// console.log(productNew);
+
+// const roles = {
+//   user1: "editor",
+//   user2: "viewer",
+//   user3: "admin",
+// };
+// let rolesAdmin = false;
+// for (const key in roles) {
+//     if (roles[key] === "admin") {
+//         rolesAdmin = true
+//     }
+    
+// }
+// console.log(rolesAdmin);
+
+// const items = {
+//   a: 3,
+//   b: 12,
+//   c: 99,
+//   d: 4,
+// };
+// const itemsNew = [];
+// for (const key in items) {
+//     if (items[key] > 10) {
+//         itemsNew.push(key) 
+//     }
+    
+// }
+// console.log(itemsNew);
+
+// const nums = {
+//   n1: 3,
+//   n2: 10,
+//   n3: 7,
+//   n4: 20,
+// };
+// const numsKey = [];
+// for (const key in nums) {
+// if (nums[key] % 2 === 0) {
+//     numsKey.push(key)
+// }
+    
+// }
+// console.log(numsKey);
+
+// const stock = {
+//   apples: 10,
+//   bananas: 6,
+//   oranges: 14,
+// };
+// const stockNew = {};
+// for (const key in stock) {
+// stockNew[key] = stock[key] * 5
+// }
+// console.log(stockNew);
+
+
+// const mix = {
+//   id: 5,
+//   name: "Igor",
+//   age: 30,
+//   active: true,
+// };
+// const mixNum = {};
+// for (const key in mix) {
+// if (typeof mix[key] === "number") {
+//     mixNum[key] = "NUM"
+// }else {
+//     mixNum[key] = mix[key]
+// }
+    
+    
+// }
+// console.log(mixNum);
+
+// const original = {
+//   a: "red",
+//   b: "green",
+//   c: "blue",
+// };
+// const originalNew = {};
+// for (const key in original) {
+ 
+//     originalNew[original[key]] = key
+    
+// }
+
+// console.log(originalNew);
+
+
+// const data = {
+//   name: "Alex",
+//   city: "Kharkiv",
+//   hobby: "football",
+// };
+// const dataNew = [];
+// for (const key in data) {
+// if (data[key].length > 5) {
+//     dataNew.push(key)
+// }
+    
+    
+// }
+// console.log(dataNew);
+
+// const scores = {
+//   math: 80,
+//   physics: 92,
+//   english: 75,
+// };
+// let scoreNew = 0;
+// for (const key in scores) {
+//    if (scores[key] > scoreNew) {
+//     scoreNew = scores[key]
+//    }
+    
+// }
+// console.log(scoreNew);
+
+// const obj = {
+//   name: "Max",
+//   car: "BMW",
+//   color: "black",
+//   phone: "iPhone",
+// };
+// let objNew = 0;
+// for (const key in obj) {
+// if (key.includes("a")) {
+//     objNew += 1
+// }
+// }
+// console.log(objNew);
+
+// const words = {
+//   a: "hello",
+//   b: "car",
+//   c: "laptop",
+// };
+// const wordsNew = {};
+// for (const key in words) {
+//   wordsNew[words[key].length] = words[key]
+// }
+// console.log(wordsNew);
+
+// const obj = {
+//   name: "Nazar",
+//   city: "",
+//   phone: "",
+//   age: 18,
+// };
+// const objNew = {};
+// for (const key in obj) {
+//  if (obj[key] !== "") {
+//     objNew[key] = obj[key]
+//  }
+    
+// }
+// console.log(objNew);
