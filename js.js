@@ -485,7 +485,7 @@
 // console.log(numbersSort);
 
 // const nums = [10, 5, 15, 8, 3];
-// const numsFindIndex = nums.findIndex(el => el === 15) 
+// const numsFindIndex = nums.findIndex(el => el === 15)
 // console.log(numsFindIndex);
 
 //ДЗ
@@ -493,7 +493,7 @@
 //Є масив булевих значень. Перетвори його в масив чисел.
 
 // const flags = [true, false, true, true, false];
-// const flagsMap = flags.map(Number); 
+// const flagsMap = flags.map(Number);
 // console.log(flagsMap);
 
 //Є змішаний масив. Залиш у ньому тільки числа.
@@ -508,7 +508,6 @@
 // const numbersFilter = numbers
 //   .filter(el => el >= 10).length
 // console.log(numbersFilter);
-
 
 //Порахуй суму тільки позитивних чисел
 
@@ -528,7 +527,6 @@
 // const numbersReverse = numbers.reverse().slice(0, 3)
 // console.log(numbersReverse);
 
-
 // const arr = [10, "5", "15", 20, "30"];
 // const arrFilter = arr.filter(el => typeof el === 'string').map(el => Number(el)).reduce((acc, el)=> acc + el, 0)
 // console.log(arrFilter);
@@ -538,10 +536,9 @@
 // console.log(numbersFilter);
 
 // const numbers = [10, 20, 30, 40, 50];
-// const numbersReduce = numbers.reduce((acc, el)=> acc + el, 0) / numbers.length 
+// const numbersReduce = numbers.reduce((acc, el)=> acc + el, 0) / numbers.length
 // const numbersFilter = numbers.filter(el => el > numbersReduce).length
 // console.log(numbersFilter);
-
 
 //Є масив слів. Створи новий масив, що містить лише перші літери кожного слова.
 
@@ -562,16 +559,13 @@
 // const wordsEvery = words.every(el => el.includes("а"))
 // console.log(wordsEvery);
 
-
 // const numbers = [2, 3, 5, 6, 7];
 // const numbersFilter = numbers.filter(el => el % 2 !== 0).reduce((acc, el)=> acc * el, 1)
 // console.log(numbersFilter);
 
-
 // const arr = [10, "5", "15", 20, "30"];
 // const arrFilter = arr.filter(el => typeof el === "string").map(el => Number(el)).reduce((acc, el)=> acc + el, 0)
 // console.log(arrFilter);
-
 
 // const arr = [4, -3, 9, -1, 0, 7];
 // const arrSort = arr.sort((a, b)=> a - b).slice(0, 3)
@@ -580,7 +574,6 @@
 // const arr = ["кіт", "собака", 42, "вода", true, "море"]
 // const arrFilter = arr.filter(el => typeof el === "string").reduce((acc, el)=> acc + el.length, 0)
 // console.log(arrFilter);
-
 
 // const obj = {
 // name: "Maksym",
@@ -592,8 +585,8 @@
 
 // const prices = { apple: 20, cherry: 40, mango: 50 };
 // let sum = 0
-// for (const key in prices) { 
-//  sum += prices[key] 
+// for (const key in prices) {
+//  sum += prices[key]
 // }
 // console.log(sum);
 
@@ -610,7 +603,7 @@
 //     if (key.length > 3) {
 //         userObj[key] = user[key]
 //     }
-    
+
 // }
 // console.log(userObj);
 
@@ -629,7 +622,7 @@
 // if (typeof data[key] === "number" || typeof data[key] === "boolean") {
 //     dataObj[key] = data[key]
 // }
-    
+
 // }
 // console.log(dataObj);
 
@@ -637,7 +630,7 @@
 // let objNew = {};
 // for (const key in obj) {
 //     objNew[key] = obj[key].length
-    
+
 // }
 // console.log(objNew);
 
@@ -674,7 +667,7 @@
 //     if (roles[key] === "admin") {
 //         rolesAdmin = true
 //     }
-    
+
 // }
 // console.log(rolesAdmin);
 
@@ -687,9 +680,9 @@
 // const itemsNew = [];
 // for (const key in items) {
 //     if (items[key] > 10) {
-//         itemsNew.push(key) 
+//         itemsNew.push(key)
 //     }
-    
+
 // }
 // console.log(itemsNew);
 
@@ -704,7 +697,7 @@
 // if (nums[key] % 2 === 0) {
 //     numsKey.push(key)
 // }
-    
+
 // }
 // console.log(numsKey);
 
@@ -719,7 +712,6 @@
 // }
 // console.log(stockNew);
 
-
 // const mix = {
 //   id: 5,
 //   name: "Igor",
@@ -733,8 +725,7 @@
 // }else {
 //     mixNum[key] = mix[key]
 // }
-    
-    
+
 // }
 // console.log(mixNum);
 
@@ -745,13 +736,12 @@
 // };
 // const originalNew = {};
 // for (const key in original) {
- 
+
 //     originalNew[original[key]] = key
-    
+
 // }
 
 // console.log(originalNew);
-
 
 // const data = {
 //   name: "Alex",
@@ -763,8 +753,7 @@
 // if (data[key].length > 5) {
 //     dataNew.push(key)
 // }
-    
-    
+
 // }
 // console.log(dataNew);
 
@@ -778,7 +767,7 @@
 //    if (scores[key] > scoreNew) {
 //     scoreNew = scores[key]
 //    }
-    
+
 // }
 // console.log(scoreNew);
 
@@ -818,10 +807,9 @@
 //  if (obj[key] !== "") {
 //     objNew[key] = obj[key]
 //  }
-    
+
 // }
 // console.log(objNew);
-
 
 // const cart = {
 //   apple: 15,
@@ -831,7 +819,7 @@
 // let cartTotal = 0;
 // for (const key in cart) {
 // cartTotal += cart[key]
-    
+
 // }
 // console.log(cartTotal);
 
@@ -859,7 +847,7 @@
 //   }else {
 //     dataNew[key] = data[key]
 //   }
-    
+
 // }
 // console.log(dataNew);
 
@@ -890,8 +878,189 @@
 // for (const key in scores) {
 
 //     if (typeof scores[key] === "number" && scores[key] > scoresNew) {
-//         scoresNew = scores[key] 
+//         scoresNew = scores[key]
 //     }
 // }
 // console.log(scoresNew);
+
+// const obj = { id: 1, name: 'Молоко', price: 2.50 };
+// const objVal = Object.values(obj)
+// console.log(objVal);
+// const obj = { id: 1, name: 'Молоко', price: 2.50 };
+// const objKey = Object.keys(obj)
+// console.log(objKey);
+// const obj = { id: 1, name: 'Молоко', price: 2.50 };
+// const objEntries = Object.entries(obj)
+// console.log(objEntries);
+
+// const nums = { a: 4, b: 7, c: 10, d: 3 };
+// const numsVal = Object.values(nums).reduce((acc, el)=> acc + el, 0) ;
+// console.log(numsVal);
+
+// const ratings = {
+//   phone: 4.3,
+//   laptop: 3.2,
+//   tablet: 4.8,
+//   tv: 2.9
+// };
+// const ratingsVal = Object.values(ratings).filter(el => el > 4)
+// console.log(ratingsVal);
+
+// const data = { a: 1, b: null, c: 3 };
+// const dataVal = Object.values(data).some(el => el === null)
+// console.log(dataVal);
+// const nums = { a: 5, b: 20, c: 13, d: 8 };
+// const numsVal = Object.values(nums).filter(el => el > 10).reduce((acc, el)=> acc + el, 0)
+// console.log(numsVal);
+
+// const obj = {
+//   age: 20,
+//   amount: 30,
+//   name: "Ira",
+//   active: true
+// };
+// const objKey = Object.keys(obj).filter(el => el[0] === "a" )
+// console.log(objKey);
+
+// const obj = {
+//   age: 20,
+//   amount: 30,
+//   name: "Ira",
+//   active: true
+// };
+// const objKey = Object.keys(obj).map(el => el.length)
+// console.log(objKey);
+
+// const data = {
+//   name: "yaroslav",
+//   city: "kyiv",
+//   age: 26
+// };
+// const dataVal = Object.values(data).filter(el => typeof el === "string").map(el => el.toUpperCase())
+// console.log(dataVal);
+
+// const obj = {
+//   title: "Book",
+//   year: 2020,
+//   author: "Tom",
+//   available: true,
+// };
+// const objVal = Object.values(obj).filter(el => typeof el === "string").length
+// console.log(objVal);
+// const obj = {
+//   title: "Book",
+//   year: 2020,
+//   author: "Tom",
+//   available: true,
+//   hp: 100,
+//   mp: 50,
+//   stamina: 30,
+// };
+// const objVal = Object.values(obj).filter(el => typeof el === "number")
+// const objSum = objVal.reduce((acc, el)=> acc + el, 0 ) / objVal.length;
+// console.log(objSum);
+
+
+// function printHello(user) {
+//     console.log(`Hello ${user}`);
+// }
+
+// const printHello = (user) => {
+//     console.log(`Hello ${user}`);
+// }
+// printHello("Maks")
+// printHello("John")
+// printHello("Evgen")
+
+// function sum (a, b) {
+//    return a + b
+// }
+// console.log(sum(2, 2));
+// const arr = [4, 5, 9, 5, 0, 7];
+// function countFives(arr) {
+// return arr.filter(el => el === 5).length
+// }
+// console.log(countFives(arr));
+// const arr = [4, 5, 9, 5, 0, 7];
+
+// function squareAll(arr) {
+//     return arr.map(el => el * el)
+// }
+// console.log(squareAll(arr));
+
+// const arr = [4, 5, 9, 5, 0, 7];
+
+//  function getEven(arr) {
+//     return arr.filter(el => el % 2 === 0)
+//  }
+//  console.log(getEven(arr));
+ 
+// const arr = [4, 5, 9, 5, 0, 7];
+// function getAverage(arr) {
+//     return arr.reduce((acc, el)=> acc + el, 0) / arr.length
+// }
+// console.log(getAverage(arr));
+
+// const arr = ["кіт", "собака", 42, "вода", true, "море"];
+// function getUpperCase(arr){
+//     return arr.filter(el => typeof el === "string").map(el => el.toUpperCase())
+// }
+// console.log(getUpperCase(arr));
+
+// const words = ["кіт", "дерево", "сонце", "вода"];
+// function getFirstLetter(words) {
+//     return words.map(el => el[0])
+// }
+// console.log(getFirstLetter(words));
+
+
+// const products = [
+//   { id: 1, title: "Phone", price: 120 },
+//   { id: 2, title: "Book", price: 15 },
+//   { id: 3, title: "Tablet", price: 80 },
+// ];
+
+// function productPrice (products) {
+//     return products.filter(el => el.price > 50)
+// }
+// console.log(productPrice(products));
+
+// const cart = [
+//   { title: "Milk", price: 20, qty: 2 },
+//   { title: "Bread", price: 15, qty: 1 },
+//   { title: "Juice", price: 25, qty: 3 },
+// ];
+// function cartSum (cart) {
+//     return cart.reduce((acc, el)=> acc + el.price * el.qty, 0)
+// }
+// console.log(cartSum(cart));
+
+// const items = [
+//   { title: "TV", price: 300, discount: false },
+//   { title: "Laptop", price: 900, discount: true },
+// ];
+// function itemsDiscount (items) {
+//     return items.some(el => el.discount === true)
+// }
+// console.log(itemsDiscount(items));
+
+// const people = [
+//   { name: "Anna", age: 20 },
+//   { name: "Petro", age: 40 },
+//   { name: "Maks", age: 30 },
+// ];
+// function peopleAge(people) {
+//     return  people.reduce((acc, el)=> acc + el.age, 0) / people.length
+// }
+// console.log(peopleAge(people));
+
+// const clients = [
+//   { id: 1, name: "Ivan", active: true },
+//   { id: 2, name: "Sofia", active: false },
+//   { id: 3, name: "Oleh", active: true },
+// ];
+// function  clientsActive (clients) {
+//     return clients.filter(el => el.active === true )
+// }
+// console.log(clientsActive (clients));
 
