@@ -1064,3 +1064,77 @@
 // }
 // console.log(clientsActive (clients));
 
+// const workers = [
+//   {name: "Anna", salary: 1200},
+//   {name: "Ivan", salary: 900},
+//   {name: "Mark", salary: 1500}
+// ];
+// function totalSalary(workers) {
+//     return workers.reduce((acc, el)=> acc + el.salary, 0)
+// }
+// console.log(totalSalary(workers));
+
+// const users = [
+//   { name: "Ira", balance: 1250.57 },
+//   { name: "Maks", balance: 2200.12 },
+//   { name: "Petro", balance: 1600.4 }
+// ];
+// function userBalance(users) {
+//     const balance = users.map(el => el.balance)
+//     const maxBalance = Math.max(...balance)
+//     return users.filter(el => el.balance ===  maxBalance)
+// }
+// console.log(userBalance(users));
+
+// const books = [
+//   { title: "Harry Potter", pages: 500 },
+//   { title: "Short Story", pages: 90 },
+//   { title: "JS Guide", pages: 350 }
+// ];
+
+// function bookTitle(books) {
+//     return books.filter(el => el.pages > 300).map(el => el.title.toUpperCase())
+// }
+// console.log(bookTitle(books));
+
+// const items = [
+//   { price: 50 },
+//   { price: 200 },
+//   { price: 300 }
+// ];
+// function itemsPrice(items) {
+//     return items.filter(el => el.price > 100).reduce((acc, el)=> acc + el.price, 0) / 2
+// }
+// console.log(itemsPrice(items));
+
+// const products = [
+//   { title: "Laptop", category: "electronics" },
+//   { title: "Shirt", category: "fashion" },
+//   { title: "TV", category: "electronics" }
+// ];
+
+// function productsCategory(products) {
+//     return products.filter(el => el.category === "electronics").map(el => el.title).sort()
+// }
+// console.log(productsCategory(products));
+
+// const obj = {
+//   title: "Book",
+//   year: 2020,
+//   author: "Том",
+//   available: true,
+// hp: 100, mp: 50, stamina: 30
+// };
+//  function objNum(obj) {
+//     let objTotal = 0;
+//     let countNum = 0;
+//     for (const key in obj) {
+// if (typeof obj[key] === "number") {
+//     objTotal += obj[key]
+//     countNum += 1
+// }
+//     }
+//     return objTotal / countNum
+//  }
+//  console.log(objNum(obj));
+ 
