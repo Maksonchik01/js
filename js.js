@@ -1137,4 +1137,70 @@
 //     return objTotal / countNum
 //  }
 //  console.log(objNum(obj));
- 
+
+//  const movies = [
+//   { title: "Inception", rating: 8.7, year: 2010 },
+//   { title: "Avatar", rating: 7.8, year: 2009 },
+//   { title: "Interstellar", rating: 8.6, year: 2014 },
+//   { title: "Matrix", rating: 8.8, year: 1999 }
+// ];
+// function moviesRating(movies) {
+//     const moviesRating = movies.filter(el => el.rating > 8)
+//     const moviesSort = moviesRating.sort((a, b)=> a.rating - b.rating)
+//     const moviesMiddleRating = moviesSort.reduce((acc, el)=> acc + el.rating, 0) / moviesSort.length
+//     return moviesMiddleRating
+// }
+// console.log(moviesRating(movies));
+
+// const products = [
+//   { name: "Phone", price: 800, category: "tech" },
+//   { name: "TV", price: 1500, category: "tech" },
+//   { name: "Table", price: 400, category: "furniture" },
+//   { name: "Chair", price: 300, category: "furniture" }
+// ];
+// function productsPrice(products) {
+//     const productsTech = products.filter(el => el.category === "tech").reduce((acc, el)=> acc + el.price, 0);
+//     const productsFurniture = products.filter(el => el.category === "furniture").reduce((acc, el)=> acc + el.price, 0)
+//     return [productsTech, productsFurniture]
+// }
+// console.log( productsPrice(products) );
+
+// const library = [
+//   { title: "CSS", price: 200 },
+//   { title: "Node.js", price: 350 },
+//   { title: "React", price: 400 }
+// ];
+// function libraryPrice(library) {
+//   const libraryPrices = library.map(el => el.price);
+//   const libraryMath = Math.max(...libraryPrices)
+//   const libraryName = library.filter(el => el.price === libraryMath )
+//   return libraryName.map(el => el.title)
+// }
+// console.log(libraryPrice(library));
+
+// const operations = [
+//   { type: "income", amount: 300 },
+//   { type: "expense", amount: 100 },
+//   { type: "income", amount: 50 },
+//   { type: "expense", amount: 40 }
+// ];
+// function operationName(operations) {
+//     const operationsAmount = operations.map(el => el.amount)
+//     const operationsMath = Math.min(...operationsAmount)
+//     const operationsType = operations.filter(el => el.amount === operationsMath)
+//     return operationsType.map(el => el.type)
+// }
+// console.log(operationName(operations));
+
+// const arr=[
+//   {name:"Laptop", price:1000, category:"tech"},
+//   {name:"Pen", price:3, category:"other"},
+//   {name:"Phone", price:800, category:"tech"},
+//   {name:"Napkin", price:1, category:"other"}
+// ]
+// function arrPrice(arr) {
+//     const arrCategory = arr.filter(el => el.category === "tech").reduce((acc, el)=> acc + el.price, 0)
+//     return arrCategory
+
+// }
+// console.log(arrPrice(arr));
