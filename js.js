@@ -1204,3 +1204,73 @@
 
 // }
 // console.log(arrPrice(arr));
+
+// const movies = [
+//   { title: "Начало", rating: 8.7, year: 2010 },
+//   { title: "Аватар", rating: 7.8, year: 2009 },
+//   { title: "Интерстеллар", rating: 8.6, year: 2014 },
+//   { title: "Матрица", rating: 8.8, year: 1999 }
+// ];
+// function moviesRating(movies) {
+//     const moviesRating = movies.filter(el => el.rating > 8)
+//     const moviesSort = moviesRating.sort((a, b)=> a.rating - b.rating)
+//     const moviesMiddleRating = moviesSort.reduce((acc, el)=> acc + el.rating, 0 ) / moviesSort.length
+//     return moviesMiddleRating 
+// }
+// console.log(moviesRating(movies));
+
+// const products = [
+//   { title: "TV", rating: 4.3 },
+//   { title: "Phone", rating: 4.9 },
+//   { title: "Laptop", rating: 4.7 }
+// ];
+// function maxRating(products) {
+//     const productsRating = products.map(el => el.rating)
+//     const productsMath = Math.max(...productsRating)
+//     const productTop = products.filter(el => el.rating === productsMath)
+//     return productTop
+// }
+// console.log(maxRating(products) );
+
+// const users = [
+//   { name: "Ivan", orders: [120, 90, 300] },
+//   { name: "Olha", orders: [500, 100] },
+//   { name: "Nazar", orders: [200, 150, 75, 100] },
+//   { name: "Ira", orders: [900] }
+// ];
+// function usersOrder(users) {
+//     const userOrders = users.map(el => el.orders.length)
+//     const userMath = Math.max(...userOrders)
+//     const userTop = users.filter(el => el.orders.length === userMath)
+//     return userTop
+// }
+// console.log(usersOrder(users));
+
+// const employees = [
+//   { name: "Pavlo", salary: 2000, bonus: 300 },
+//   { name: "Ira", salary: 1500, bonus: 150 },
+//   { name: "Nazar", salary: 3500, bonus: 400 },
+//   { name: "Olha", salary: 2900, bonus: 500 },
+//   { name: "Oleh", salary: 1800, bonus: 100 }
+// ];
+
+// function employeesSalaries(employees) {
+//     const employeesSalary = employees.sort((a, b)=> b.salary - a.salary).slice(0, 3)
+// return employeesSalary
+// }
+// console.log(employeesSalaries(employees) );
+
+// const users = [
+//   { id: 1, name: "Alice", age: 25, role: "user", score: 350, gender: "female" },
+//   { id: 2, name: "Bob", age: 32, role: "admin", score: 500, gender: "male" },
+//   { id: 3, name: "Charlie", age: 29, role: "moderator", score: 410, gender: "male" },
+//   { id: 4, name: "Diana", age: 22, role: "user", score: 270, gender: "female" },
+//   { id: 5, name: "Eve", age: 35, role: "admin", score: 610, gender: "female" }
+// ];
+// function usersIncludesStr(users) {
+//     const usersIncludes = users.filter(el => el.name.toLowerCase().includes("a"))
+//     const usersUpperCase = usersIncludes.map(el => el.name.toUpperCase())
+//     return usersUpperCase
+// }
+// console.log(usersIncludesStr(users));
+
