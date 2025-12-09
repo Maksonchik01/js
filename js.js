@@ -960,7 +960,6 @@
 // const objSum = objVal.reduce((acc, el)=> acc + el, 0 ) / objVal.length;
 // console.log(objSum);
 
-
 // function printHello(user) {
 //     console.log(`Hello ${user}`);
 // }
@@ -994,7 +993,7 @@
 //     return arr.filter(el => el % 2 === 0)
 //  }
 //  console.log(getEven(arr));
- 
+
 // const arr = [4, 5, 9, 5, 0, 7];
 // function getAverage(arr) {
 //     return arr.reduce((acc, el)=> acc + el, 0) / arr.length
@@ -1012,7 +1011,6 @@
 //     return words.map(el => el[0])
 // }
 // console.log(getFirstLetter(words));
-
 
 // const products = [
 //   { id: 1, title: "Phone", price: 120 },
@@ -1215,7 +1213,7 @@
 //     const moviesRating = movies.filter(el => el.rating > 8)
 //     const moviesSort = moviesRating.sort((a, b)=> a.rating - b.rating)
 //     const moviesMiddleRating = moviesSort.reduce((acc, el)=> acc + el.rating, 0 ) / moviesSort.length
-//     return moviesMiddleRating 
+//     return moviesMiddleRating
 // }
 // console.log(moviesRating(movies));
 
@@ -1273,4 +1271,162 @@
 //     return usersUpperCase
 // }
 // console.log(usersIncludesStr(users));
+// const par = document.querySelector(".text");
+// const btn = document.querySelector(".btn");
+// function printHello() {
+//   par.textContent = "Hello Maks";
+// }
+// btn.addEventListener("click", printHello);
 
+// const ul = document.querySelector(".wrapper-products");
+// const products = [
+//   {
+//     id: 1,
+//     name: "Смартфон Samsung Galaxy S23",
+//     category: "electronics",
+//     price: 32000,
+//     rating: 4.7,
+//     stock: 12,
+//   },
+//   {
+//     id: 2,
+//     name: "Ноутбук Apple MacBook Air M2",
+//     category: "electronics",
+//     price: 48000,
+//     rating: 4.9,
+//     stock: 7,
+//   },
+//   {
+//     id: 3,
+//     name: "Игровая мышь Logitech G305",
+//     category: "accessories",
+//     price: 1900,
+//     rating: 4.6,
+//     stock: 25,
+//   },
+//   {
+//     id: 4,
+//     name: "Стул офисный Ergonomic Pro",
+//     category: "furniture",
+//     price: 4500,
+//     rating: 4.3,
+//     stock: 9,
+//   },
+//   {
+//     id: 5,
+//     name: "Кроссовки Nike Air Max",
+//     category: "clothing",
+//     price: 3200,
+//     rating: 4.5,
+//     stock: 15,
+//   },
+//   {
+//     id: 6,
+//     name: "Футболка Puma Sport",
+//     category: "clothing",
+//     price: 850,
+//     rating: 4.1,
+//     stock: 40,
+//   },
+//   {
+//     id: 7,
+//     name: "Телевизор LG OLED55",
+//     category: "electronics",
+//     price: 54000,
+//     rating: 4.8,
+//     stock: 4,
+//   },
+//   {
+//     id: 8,
+//     name: "Кофейный столик Milano",
+//     category: "furniture",
+//     price: 2800,
+//     rating: 4.2,
+//     stock: 18,
+//   },
+//   {
+//     id: 9,
+//     name: "Наушники Sony WH-1000XM5",
+//     category: "accessories",
+//     price: 17500,
+//     rating: 4.9,
+//     stock: 6,
+//   },
+//   {
+//     id: 10,
+//     name: "Рюкзак Herschel Classic",
+//     category: "accessories",
+//     price: 2100,
+//     rating: 4.4,
+//     stock: 13,
+//   },
+// ];
+// function renderProducts(arr) {
+//   ul.innerHTML = arr.map((el) => {
+//     return `
+//         <li class="item-li">
+//         <h2>${el.name}</h2>
+//         <p>${el.category}</p>
+//         <p>${el.price}</p>
+//         <button>Buy</button>
+//         </li>
+
+//         `;
+//   }).join("");
+// }
+
+// renderProducts(products)
+// const filter = document.querySelector(".filter-btn")
+// function filterPrice(arr) {
+//     const filterArr = arr.filter(el => el.price > 3000)
+//     renderProducts(filterArr)
+// }
+// filter.addEventListener("click", ()=> filterPrice(products))
+
+// const users = [
+//   { id: 1, age: 20, active: true },
+//   { id: 2, age: 30, active: false },
+//   { id: 3, age: 40, active: true }
+// ];
+
+// const div = document.querySelector(".users")
+// const btn = document.querySelector(".users-btn")
+
+// function renderUsers(arr) {
+//   div.innerHTML = arr.map((el)=> {
+//     return `
+//     <p>${el.age}</p>
+    
+//     `
+//   }).join("")
+// }
+// renderUsers(users)
+
+// function usersFilter(arr) {
+//   const userSort =  users.filter(el => el.age > 25 && el.active === true)
+// renderUsers(userSort)
+// }
+// users-btn.addEventListener("click", ()=> usersFilter(users))
+
+const products2 = [
+  { name: "Apple", category: "fruit" },
+  { name: "Carrot", category: "vegetable" },
+  { name: "Banana", category: "fruit" }
+];
+
+
+const div = document.querySelector(".products")
+const productsBtn = document.querySelector(".products-btn")
+function renderProducts2(arr) {
+  div.innerHTML = arr.map((el)=> {
+    return `
+    <p>${el.name}</p>
+    `
+  }).join("")
+}
+renderProducts2(products2)
+function products2Filter(arr) {
+  const productsSort = products2.filter(el => el.category === "fruit" && el.name.toLowerCase().includes("a"))
+  renderProducts2(productsSort)
+}
+productsBtn.addEventListener("click", ()=> products2Filter(products2))

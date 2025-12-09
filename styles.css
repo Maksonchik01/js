@@ -1,0 +1,11 @@
+.item-li{
+    border: 1px solid red;
+    width: calc(25% - 24px);
+}
+.wrapper-products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+}
