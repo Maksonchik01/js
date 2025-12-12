@@ -1408,25 +1408,139 @@
 // }
 // users-btn.addEventListener("click", ()=> usersFilter(users))
 
-const products2 = [
-  { name: "Apple", category: "fruit" },
-  { name: "Carrot", category: "vegetable" },
-  { name: "Banana", category: "fruit" }
-];
+// const products2 = [
+//   { name: "Apple", category: "fruit" },
+//   { name: "Carrot", category: "vegetable" },
+//   { name: "Banana", category: "fruit" }
+// ];
 
 
-const div = document.querySelector(".products")
-const productsBtn = document.querySelector(".products-btn")
-function renderProducts2(arr) {
-  div.innerHTML = arr.map((el)=> {
-    return `
-    <p>${el.name}</p>
-    `
-  }).join("")
-}
-renderProducts2(products2)
-function products2Filter(arr) {
-  const productsSort = products2.filter(el => el.category === "fruit" && el.name.toLowerCase().includes("a"))
-  renderProducts2(productsSort)
-}
-productsBtn.addEventListener("click", ()=> products2Filter(products2))
+// const div = document.querySelector(".products")
+// const productsBtn = document.querySelector(".products-btn")
+// function renderProducts2(arr) {
+//   div.innerHTML = arr.map((el)=> {
+//     return `
+//     <p>${el.name}</p>
+//     `
+//   }).join("")
+// }
+// renderProducts2(products2)
+// function products2Filter(arr) {
+//   const productsSort = products2.filter(el => el.category === "fruit" && el.name.toLowerCase().includes("a"))
+//   renderProducts2(productsSort)
+// }
+// productsBtn.addEventListener("click", ()=> products2Filter(products2))
+
+// const products = [
+//   { name: "A", price: 200 },
+//   { name: "B", price: 400 },
+//   { name: "C", price: 600 }
+// ];
+// const newProducts = document.querySelector(".new-products")
+// const newProductsBtn = document.querySelector(".new-products-btn")
+// function renderNewProductBtn(arr) {
+//   const newProductsReduce = arr.reduce((acc, el)=> acc + el.price, 0) / arr.length
+//   const newProductsFilter = arr.filter(el => el.price >= newProductsReduce)
+//   newProducts.innerHTML = newProductsFilter.map((el)=> { 
+// return `
+// <p>${el.price}</p>
+// `
+//   }).join("")
+// }
+// newProductsBtn.addEventListener("click", ()=> renderNewProductBtn(products))
+
+// const products = [
+//   {
+//     id: 1,
+//     name: "Смартфон Samsung Galaxy S23",
+//     category: "electronics",
+//     price: 32000,
+//     rating: 4.7,
+//     stock: 12
+//   },
+//   {
+//     id: 2,
+//     name: "Ноутбук Apple MacBook Air M2",
+//     category: "electronics",
+//     price: 48000,
+//     rating: 4.9,
+//     stock: 7
+//   },
+//   {
+//     id: 3,
+//     name: "Игровая мышь Logitech G305",
+//     category: "accessories",
+//     price: 1900,
+//     rating: 4.6,
+//     stock: 25
+//   },
+//   {
+//     id: 4,
+//     name: "Стул офисный Ergonomic Pro",
+//     category: "furniture",
+//     price: 4500,
+//     rating: 4.3,
+//     stock: 9
+//   },
+//   {
+//     id: 5,
+//     name: "Кроссовки Nike Air Max",
+//     category: "clothing",
+//     price: 3200,
+//     rating: 4.5,
+//     stock: 15
+//   },
+//   {
+//     id: 6,
+//     name: "Футболка Puma Sport",
+//     category: "clothing",
+//     price: 850,
+//     rating: 4.1,
+//     stock: 40
+//   },
+//   {
+//     id: 7,
+//     name: "Телевизор LG OLED55",
+//     category: "electronics",
+//     price: 54000,
+//     rating: 4.8,
+//     stock: 4
+//   },
+//   {
+//     id: 8,
+//     name: "Кофейный столик Milano",
+//     category: "furniture",
+//     price: 2800,
+//     rating: 4.2,
+//     stock: 18
+//   },
+//   {
+//     id: 9,
+//     name: "Наушники Sony WH-1000XM5",
+//     category: "accessories",
+//     price: 17500,
+//     rating: 4.9,
+//     stock: 6
+//   },
+//   {
+//     id: 10,
+//     name: "Рюкзак Herschel Classic",
+//     category: "accessories",
+//     price: 2100,
+//     rating: 4.4,
+//     stock: 13
+//   }
+// ];
+// const productsTitle = document.querySelector(".products-title")
+// const productsTitleBtn = document.querySelector(".products-title-btn")
+// function renderProductsTitle(arr) {
+//   const productsTitleMap = arr.map(el => el.name.length)
+// const productsTitleMath = Math.max(...productsTitleMap)
+// const productsTitleFilter = arr.filter(el => el.name.length === productsTitleMath)
+// productsTitle.innerHTML = productsTitleFilter.map((el)=> {
+//   return `
+//   <p>${el.name}</p>
+//   `
+// }).join("")
+// }
+// productsTitleBtn.addEventListener("click", ()=> renderProductsTitle(products))
