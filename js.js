@@ -1544,35 +1544,138 @@
 // }).join("")
 // }
 // productsTitleBtn.addEventListener("click", ()=> renderProductsTitle(products))
-const fruits = [
-  "apple",
-  "banana",
-  "orange",
-  "mango",
-  "grape",
-  "pineapple",
-  "kiwi",
-  "strawberry",
-  "pear",
-  "watermelon"
+// const fruits = [
+//   "apple",
+//   "banana",
+//   "orange",
+//   "mango",
+//   "grape",
+//   "pineapple",
+//   "kiwi",
+//   "strawberry",
+//   "pear",
+//   "watermelon"
+// ];
+
+// const input = document.querySelector(".input")
+// const btn = document.querySelector(".btn-input")
+// const list = document.querySelector(".list")
+
+// function renderFruits(arr) {
+//    list.innerHTML = arr.map((el)=> {
+// return `
+// <li>${el}</li>
+// `
+//    }).join("")
+// }
+// renderFruits(fruits)
+
+// function filterArray(arr) {
+//     const value = input.value
+//     const fruitsFilter = arr.filter(el => el.includes(value))
+//     renderFruits(fruitsFilter)
+// }
+// input.addEventListener("input", ()=> filterArray(fruits))
+
+const products = [
+  {
+    id: 1,
+    name: "Смартфон Samsung Galaxy S23",
+    category: "electronics",
+    price: 32000,
+    rating: 4.7,
+    stock: 12
+  },
+  {
+    id: 2,
+    name: "Ноутбук Apple MacBook Air M2",
+    category: "electronics",
+    price: 48000,
+    rating: 4.9,
+    stock: 7
+  },
+  {
+    id: 3,
+    name: "Игровая мышь Logitech G305",
+    category: "accessories",
+    price: 1900,
+    rating: 4.6,
+    stock: 25
+  },
+  {
+    id: 4,
+    name: "Стул офисный Ergonomic Pro",
+    category: "furniture",
+    price: 4500,
+    rating: 4.3,
+    stock: 9
+  },
+  {
+    id: 5,
+    name: "Кроссовки Nike Air Max",
+    category: "clothing",
+    price: 3200,
+    rating: 4.5,
+    stock: 15
+  },
+  {
+    id: 6,
+    name: "Футболка Puma Sport",
+    category: "clothing",
+    price: 850,
+    rating: 4.1,
+    stock: 40
+  },
+  {
+    id: 7,
+    name: "Телевизор LG OLED55",
+    category: "electronics",
+    price: 54000,
+    rating: 4.8,
+    stock: 4
+  },
+  {
+    id: 8,
+    name: "Кофейный столик Milano",
+    category: "furniture",
+    price: 2800,
+    rating: 4.2,
+    stock: 18
+  },
+  {
+    id: 9,
+    name: "Наушники Sony WH-1000XM5",
+    category: "accessories",
+    price: 17500,
+    rating: 4.9,
+    stock: 6
+  },
+  {
+    id: 10,
+    name: "Рюкзак Herschel Classic",
+    category: "accessories",
+    price: 2100,
+    rating: 4.4,
+    stock: 13
+  }
 ];
-
-const input = document.querySelector(".input")
-const btn = document.querySelector(".btn-input")
-const list = document.querySelector(".list")
-
-function renderFruits(arr) {
-   list.innerHTML = arr.map((el)=> {
-return `
-<li>${el}</li>
-`
-   }).join("")
+const inputQuan = document.querySelector(".quantity-input")
+const btnQuan = document.querySelector(".btn-input-quantity")
+const listQuan = document.querySelector(".list-quantity")
+function renderInputQuan(arr) {
+    listQuan.innerHTML = arr.map((el)=> {
+        return `
+        <li>
+        <h3>${el.name}</h3>
+        <p>${el.category}</p>
+        <p>${el.stock}</p>
+        </li>
+        `
+    }).join("")
+} renderInputQuan(products)
+function inputStock(arr) {
+    const valueInput = inputQuan.value;
+    const inputFilter = arr.filter(el => el.stock > valueInput)
+    renderInputQuan(inputFilter)
 }
-renderFruits(fruits)
-
-function filterArray(arr) {
-    const value = input.value
-    const fruitsFilter = arr.filter(el => el.includes(value))
-    renderFruits(fruitsFilter)
-}
-input.addEventListener("input", ()=> filterArray(fruits))
+inputQuan.addEventListener("input", ()=> inputStock(products))
