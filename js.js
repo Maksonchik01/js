@@ -1544,3 +1544,35 @@
 // }).join("")
 // }
 // productsTitleBtn.addEventListener("click", ()=> renderProductsTitle(products))
+const fruits = [
+  "apple",
+  "banana",
+  "orange",
+  "mango",
+  "grape",
+  "pineapple",
+  "kiwi",
+  "strawberry",
+  "pear",
+  "watermelon"
+];
+
+const input = document.querySelector(".input")
+const btn = document.querySelector(".btn-input")
+const list = document.querySelector(".list")
+
+function renderFruits(arr) {
+   list.innerHTML = arr.map((el)=> {
+return `
+<li>${el}</li>
+`
+   }).join("")
+}
+renderFruits(fruits)
+
+function filterArray(arr) {
+    const value = input.value
+    const fruitsFilter = arr.filter(el => el.includes(value))
+    renderFruits(fruitsFilter)
+}
+input.addEventListener("input", ()=> filterArray(fruits))
