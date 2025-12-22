@@ -1681,121 +1681,133 @@
 // inputQuan.addEventListener("input", ()=> inputStock(products))
 
 
-const products = [
-  {
-    id: 1,
-    name: "Смартфон Samsung Galaxy S23",
-    category: "electronics",
-    price: 32000,
-    rating: 4.7,
-    stock: 12
-  },
-  {
-    id: 2,
-    name: "Ноутбук Apple MacBook Air M2",
-    category: "electronics",
-    price: 48000,
-    rating: 4.9,
-    stock: 7
-  },
-  {
-    id: 3,
-    name: "Игровая мышь Logitech G305",
-    category: "accessories",
-    price: 1900,
-    rating: 4.6,
-    stock: 25
-  },
-  {
-    id: 4,
-    name: "Стул офисный Ergonomic Pro",
-    category: "furniture",
-    price: 4500,
-    rating: 4.3,
-    stock: 9
-  },
-  {
-    id: 5,
-    name: "Кроссовки Nike Air Max",
-    category: "clothing",
-    price: 3200,
-    rating: 4.5,
-    stock: 15
-  },
-  {
-    id: 6,
-    name: "Футболка Puma Sport",
-    category: "clothing",
-    price: 850,
-    rating: 4.1,
-    stock: 40
-  },
-  {
-    id: 7,
-    name: "Телевизор LG OLED55",
-    category: "electronics",
-    price: 54000,
-    rating: 4.8,
-    stock: 4
-  },
-  {
-    id: 8,
-    name: "Кофейный столик Milano",
-    category: "furniture",
-    price: 2800,
-    rating: 4.2,
-    stock: 18
-  },
-  {
-    id: 9,
-    name: "Наушники Sony WH-1000XM5",
-    category: "accessories",
-    price: 17500,
-    rating: 4.9,
-    stock: 6
-  },
-  {
-    id: 10,
-    name: "Рюкзак Herschel Classic",
-    category: "accessories",
-    price: 2100,
-    rating: 4.4,
-    stock: 13
-  }
-];
-const productInput = document.querySelector(".product-name-input")
-const productBtn = document.querySelector(".product-name-btn")
-const productList = document.querySelector(".product-name-list")
-const productReset = document.querySelector(".product-name-reset")
-const productCategoryInput = document.querySelector(".product-category-input")
-const productsCategoryBtn = document.querySelector(".product-category-btn")
-function productInputRender(arr) {
-  productList.innerHTML = arr.map((el) =>{
-return `
-<li class="product-item">
-<h3>${el.name}</h3>
-<p>${el.category}</p>
-<p>${el.price}</p>
-</li>
-`
-  }).join("")
-} 
-productInputRender(products)
- function inputName(arr) {
-  const inputValue = productInput.value.toLowerCase()
-  const productsFilter = products.filter(el => el.name.toLowerCase().includes(inputValue))
-  productInputRender(productsFilter)
- }
-productBtn.addEventListener("click", ()=> inputName(products))
-function inputReset(arr) {
-  productInput.value = ""
-  productInputRender(products)
-}
-productReset.addEventListener("click", ()=> inputReset(products))
+// const products = [
+//   {
+//     id: 1,
+//     name: "Смартфон Samsung Galaxy S23",
+//     category: "electronics",
+//     price: 32000,
+//     rating: 4.7,
+//     stock: 12
+//   },
+//   {
+//     id: 2,
+//     name: "Ноутбук Apple MacBook Air M2",
+//     category: "electronics",
+//     price: 48000,
+//     rating: 4.9,
+//     stock: 7
+//   },
+//   {
+//     id: 3,
+//     name: "Игровая мышь Logitech G305",
+//     category: "accessories",
+//     price: 1900,
+//     rating: 4.6,
+//     stock: 25
+//   },
+//   {
+//     id: 4,
+//     name: "Стул офисный Ergonomic Pro",
+//     category: "furniture",
+//     price: 4500,
+//     rating: 4.3,
+//     stock: 9
+//   },
+//   {
+//     id: 5,
+//     name: "Кроссовки Nike Air Max",
+//     category: "clothing",
+//     price: 3200,
+//     rating: 4.5,
+//     stock: 15
+//   },
+//   {
+//     id: 6,
+//     name: "Футболка Puma Sport",
+//     category: "clothing",
+//     price: 850,
+//     rating: 4.1,
+//     stock: 40
+//   },
+//   {
+//     id: 7,
+//     name: "Телевизор LG OLED55",
+//     category: "electronics",
+//     price: 54000,
+//     rating: 4.8,
+//     stock: 4
+//   },
+//   {
+//     id: 8,
+//     name: "Кофейный столик Milano",
+//     category: "furniture",
+//     price: 2800,
+//     rating: 4.2,
+//     stock: 18
+//   },
+//   {
+//     id: 9,
+//     name: "Наушники Sony WH-1000XM5",
+//     category: "accessories",
+//     price: 17500,
+//     rating: 4.9,
+//     stock: 6
+//   },
+//   {
+//     id: 10,
+//     name: "Рюкзак Herschel Classic",
+//     category: "accessories",
+//     price: 2100,
+//     rating: 4.4,
+//     stock: 13
+//   }
+// ];
+// const productInput = document.querySelector(".product-name-input")
+// const productBtn = document.querySelector(".product-name-btn")
+// const productList = document.querySelector(".product-name-list")
+// const productReset = document.querySelector(".product-name-reset")
+// const productCategoryInput = document.querySelector(".product-category-input")
+// const productsCategoryBtn = document.querySelector(".product-category-btn")
+// function productInputRender(arr) {
+//   productList.innerHTML = arr.map((el) =>{
+// return `
+// <li class="product-item">
+// <h3>${el.name}</h3>
+// <p>${el.category}</p>
+// <p>${el.price}</p>
+// </li>
+// `
+//   }).join("")
+// } 
+// productInputRender(products)
+//  function inputName(arr) {
+//   const inputValue = productInput.value.toLowerCase()
+//   const productsFilter = products.filter(el => el.name.toLowerCase().includes(inputValue))
+//   productInputRender(productsFilter)
+//  }
+// productBtn.addEventListener("click", ()=> inputName(products))
+// function inputReset(arr) {
+//   productInput.value = ""
+//   productInputRender(products)
+// }
+// productReset.addEventListener("click", ()=> inputReset(products))
 
-function categoryInput(arr) {
-  const categoryInputValue = productCategoryInput.value.toLowerCase()
-  const categoryFilter = products.filter(el => el.category.toLowerCase().includes(categoryInputValue))
-   productInputRender(categoryFilter)
+// function categoryInput(arr) {
+//   const categoryInputValue = productCategoryInput.value.toLowerCase()
+//   const categoryFilter = products.filter(el => el.category.toLowerCase().includes(categoryInputValue))
+//    productInputRender(categoryFilter)
+// }
+// productsCategoryBtn.addEventListener("click", ()=> categoryInput(products))
+const burger = document.querySelector(".burger");
+const burgerBg = document.querySelector(".burger-menu-bg");
+const close = document.querySelector(".close-menu");
+function openBurger() {
+  burgerBg.classList.add("active")
 }
-productsCategoryBtn.addEventListener("click", ()=> categoryInput(products))
+burger.addEventListener("click", openBurger)
+
+function closeBurger() {
+  burgerBg.classList.remove("active")
+}
+close.addEventListener("click", closeBurger)
