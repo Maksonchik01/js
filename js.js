@@ -1799,15 +1799,42 @@
 //    productInputRender(categoryFilter)
 // }
 // productsCategoryBtn.addEventListener("click", ()=> categoryInput(products))
-const burger = document.querySelector(".burger");
-const burgerBg = document.querySelector(".burger-menu-bg");
-const close = document.querySelector(".close-menu");
-function openBurger() {
-  burgerBg.classList.add("active")
-}
-burger.addEventListener("click", openBurger)
+// const burger = document.querySelector(".burger");
+// const burgerBg = document.querySelector(".burger-menu-bg");
+// const close = document.querySelector(".close-menu");
+// function openBurger() {
+//   burgerBg.classList.add("active")
+// }
+// burger.addEventListener("click", openBurger)
 
-function closeBurger() {
-  burgerBg.classList.remove("active")
-}
-close.addEventListener("click", closeBurger)
+// function closeBurger() {
+//   burgerBg.classList.remove("active")
+// }
+// close.addEventListener("click", closeBurger)
+
+const phones = [
+  { model: "iPhone", price: 800 },
+  { model: "Samsung", price: 700 },
+  { model: "Xiaomi", price: 300 }
+];
+const input = document.querySelector(".input-books");
+const btn = document.querySelector(".btn-books");
+const list = document.querySelector(".list-books");
+ function phonesRender(arr) {
+  list.innerHTML = arr.map((el)=>{
+  return `
+  <li>
+  <h3>${el.model}</h3>
+  <p>${el.price}</p>
+  </li>
+  `
+  }).join("")
+ }
+ phonesRender(phones)
+
+ function inputName(arr) {
+  const value = input.value.toLowerCase();
+  const productFilter = arr.filter(el => el.model.toLowerCase().includes(value))
+   phonesRender(productFilter)
+ }
+input.addEventListener("input", ()=> inputName(phones))
