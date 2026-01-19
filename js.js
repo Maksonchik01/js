@@ -1812,29 +1812,188 @@
 // }
 // close.addEventListener("click", closeBurger)
 
-const phones = [
-  { model: "iPhone", price: 800 },
-  { model: "Samsung", price: 700 },
-  { model: "Xiaomi", price: 300 }
+// const phones = [
+//   { model: "iPhone", price: 800 },
+//   { model: "Samsung", price: 700 },
+//   { model: "Xiaomi", price: 300 }
+// ];
+// const input = document.querySelector(".input-books");
+// const btn = document.querySelector(".btn-books");
+// const list = document.querySelector(".list-books");
+//  function phonesRender(arr) {
+//   list.innerHTML = arr.map((el)=>{
+//   return `
+//   <li>
+//   <h3>${el.model}</h3>
+//   <p>${el.price}</p>
+//   </li>
+//   `
+//   }).join("")
+//  }
+//  phonesRender(phones)
+
+//  function inputName(arr) {
+//   const value = input.value.toLowerCase();
+//   const productFilter = arr.filter(el => el.model.toLowerCase().includes(value))
+//    phonesRender(productFilter)
+//  }
+// input.addEventListener("input", ()=> inputName(phones))
+
+// const cars = [
+//   { model: "Audi A4", year: 2018, type: "sedan" },
+//   { model: "BMW X5", year: 2020, type: "suv" },
+//   { model: "Toyota Camry", year: 2014, type: "sedan" }
+// ];
+// const list = document.querySelector(".list-cars");
+// const btn = document.querySelector(".button-cars");
+// function carsRender(arr) {
+//   list.innerHTML = arr.map((el)=>{
+// return `
+// <li>
+// <h3>${el.model}</h3>
+// <p>${el.year}</p>
+// <p>${el.type}</p>
+// </li>
+// `
+//   }).join("")
+// }
+// carsRender(cars)
+// function carsFilter(arr) {
+//   const filterCars = arr.filter(el => el.year >= 2015 && el.type === "sedan" )
+// carsRender(filterCars)
+// }
+// btn.addEventListener("click", ()=> carsFilter(cars))
+
+// const users = [
+//   { name: "John", gender: "male" },
+//   { name: "Jane", gender: "female" },
+//   { name: "Bob", gender: "male" },
+//   { name: "Alice", gender: "female" },
+// ];
+// const list = document.querySelector(".list-users");
+// const btn = document.querySelector(".btn-result");
+// function usersRender(arr) {
+//   list.innerHTML = arr.map((el)=>{
+//     return `
+//     <li>
+//     <h3>${el.name}</h3>
+//     <p>${el.gender}</p>
+//     </li>
+//     `
+//   }).join("")
+// }
+// usersRender(users)
+// function usersFilter(arr) {
+//   list.innerHTML = arr.filter(el => el.gender === "male").length
+// }
+// btn.addEventListener("click", ()=> usersFilter(users))
+
+const products = [
+  {
+    id: 1,
+    name: "Смартфон Samsung Galaxy S23",
+    category: "electronics",
+    price: 32000,
+    rating: 4.7,
+    stock: 12
+  },
+  {
+    id: 2,
+    name: "Ноутбук Apple MacBook Air M2",
+    category: "electronics",
+    price: 48000,
+    rating: 4.9,
+    stock: 7
+  },
+  {
+    id: 3,
+    name: "Игровая мышь Logitech G305",
+    category: "accessories",
+    price: 1900,
+    rating: 4.6,
+    stock: 25
+  },
+  {
+    id: 4,
+    name: "Стул офисный Ergonomic Pro",
+    category: "furniture",
+    price: 4500,
+    rating: 4.3,
+    stock: 9
+  },
+  {
+    id: 5,
+    name: "Кроссовки Nike Air Max",
+    category: "clothing",
+    price: 3200,
+    rating: 4.5,
+    stock: 15
+  },
+  {
+    id: 6,
+    name: "Футболка Puma Sport",
+    category: "clothing",
+    price: 850,
+    rating: 4.1,
+    stock: 40
+  },
+  {
+    id: 7,
+    name: "Телевизор LG OLED55",
+    category: "electronics",
+    price: 54000,
+    rating: 4.8,
+    stock: 4
+  },
+  {
+    id: 8,
+    name: "Кофейный столик Milano",
+    category: "furniture",
+    price: 2800,
+    rating: 4.2,
+    stock: 18
+  },
+  {
+    id: 9,
+    name: "Наушники Sony WH-1000XM5",
+    category: "accessories",
+    price: 17500,
+    rating: 4.9,
+    stock: 6
+  },
+  {
+    id: 10,
+    name: "Рюкзак Herschel Classic",
+    category: "accessories",
+    price: 2100,
+    rating: 4.4,
+    stock: 13
+  }
 ];
-const input = document.querySelector(".input-books");
-const btn = document.querySelector(".btn-books");
-const list = document.querySelector(".list-books");
- function phonesRender(arr) {
+ const list = document.querySelector(".product-list");
+ const btn = document.querySelector(".product-btn");
+ function listRender(arr) {
   list.innerHTML = arr.map((el)=>{
   return `
   <li>
-  <h3>${el.model}</h3>
+  <h3> ${el.name}</h3>
+  <p>${el.category}</p>
   <p>${el.price}</p>
+  <p>${el.rating}</p>
+  <p>${el.stock}</p>
   </li>
   `
   }).join("")
- }
- phonesRender(phones)
 
- function inputName(arr) {
-  const value = input.value.toLowerCase();
-  const productFilter = arr.filter(el => el.model.toLowerCase().includes(value))
-   phonesRender(productFilter)
  }
-input.addEventListener("input", ()=> inputName(phones))
+ listRender(products)
+ function calculateProducts(arr) {
+  const result = arr.map(el => {
+    return {
+      ...el,
+      price:(el.price / 50.5).toFixed(2)
+    }
+  })
+  listRender(result)
+ }
+btn.addEventListener("click", ()=> calculateProducts(products))
