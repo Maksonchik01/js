@@ -2131,29 +2131,285 @@
 // }
 // btn.addEventListener("click", ()=> sortProduct(products))
 
-const users = [
-  {
-    name: "Anna",
-    balance: 500,
-    orders: [{ price: 1200 }, { price: 300 }]
-  },
-  {
-    name: "Ivan",
-    balance: 800,
-    orders: [{ price: 400 }]
-  },
-  {
-    name: "Oleg",
-    balance: 200,
-    orders: [{ price: 1500 }]
-  }
-];
-const text = document.querySelector(".balance");
-const btn = document.querySelector(".btn-balance");
- function balance(arr) {
-const arrayPrice = arr.map(el => el.orders).flat(1)
-const result = arrayPrice.reduce((acc, el)=> acc + el.price, 0)
-text.textContent = result
- }
+// const users = [
+//   {
+//     name: "Anna",
+//     balance: 500,
+//     orders: [{ price: 1200 }, { price: 300 }]
+//   },
+//   {
+//     name: "Ivan",
+//     balance: 800,
+//     orders: [{ price: 400 }]
+//   },
+//   {
+//     name: "Oleg",
+//     balance: 200,
+//     orders: [{ price: 1500 }]
+//   }
+// ];
+// const text = document.querySelector(".balance");
+// const btn = document.querySelector(".btn-balance");
+//  function balance(arr) {
+// const arrayPrice = arr.map(el => el.orders).flat(1)
+// const result = arrayPrice.reduce((acc, el)=> acc + el.price, 0)
+// text.textContent = result
+//  }
 
-btn.addEventListener("click", ()=> balance(users))
+// btn.addEventListener("click", ()=> balance(users))
+// const users = [
+//   { name: "Anna", age: 22 },
+//    {name: "Ivan", age: 30 },
+//    {name: "Oleg", age: 18 }
+// ];
+// const list = document.querySelector(".user-list");
+// const input = document.querySelector(".user-input");
+// const btn = document.querySelector(".user-btn");
+// function usersRender(arr) {
+//   list.innerHTML = arr.map((el)=>{
+//     return `
+//     <li>
+//     <h3>${el.name}</h3>
+//     <p>${el.age}</p>
+//     </li>
+//     `
+//   }).join("")
+// }
+// usersRender(users) 
+// function usersFilter (arr) {
+//   const value = input.value;
+//   const filter = arr.filter(el => el.age > value);
+//   usersRender(filter)
+// }
+// btn.addEventListener("click", ()=> usersFilter(users))
+
+// const products = [
+//   {
+//     id: 1,
+//     name: "Смартфон Samsung Galaxy S23",
+//     category: "electronics",
+//     price: 32000,
+//     rating: 4.7,
+//     stock: 12
+//   },
+//   {
+//     id: 2,
+//     name: "Ноутбук Apple MacBook Air M2",
+//     category: "electronics",
+//     price: 48000,
+//     rating: 4.9,
+//     stock: 7
+//   },
+//   {
+//     id: 3,
+//     name: "Игровая мышь Logitech G305",
+//     category: "accessories",
+//     price: 1900,
+//     rating: 4.6,
+//     stock: 25
+//   },
+//   {
+//     id: 4,
+//     name: "Стул офисный Ergonomic Pro",
+//     category: "furniture",
+//     price: 4500,
+//     rating: 4.3,
+//     stock: 9
+//   },
+//   {
+//     id: 5,
+//     name: "Кроссовки Nike Air Max",
+//     category: "clothing",
+//     price: 3200,
+//     rating: 4.5,
+//     stock: 15
+//   },
+//   {
+//     id: 6,
+//     name: "Футболка Puma Sport",
+//     category: "clothing",
+//     price: 850,
+//     rating: 4.1,
+//     stock: 40
+//   },
+//   {
+//     id: 7,
+//     name: "Телевизор LG OLED55",
+//     category: "electronics",
+//     price: 54000,
+//     rating: 4.8,
+//     stock: 4
+//   },
+//   {
+//     id: 8,
+//     name: "Кофейный столик Milano",
+//     category: "furniture",
+//     price: 2800,
+//     rating: 4.2,
+//     stock: 18
+//   },
+//   {
+//     id: 9,
+//     name: "Наушники Sony WH-1000XM5",
+//     category: "accessories",
+//     price: 17500,
+//     rating: 4.9,
+//     stock: 6
+//   },
+//   {
+//     id: 10,
+//     name: "Рюкзак Herschel Classic",
+//     category: "accessories",
+//     price: 2100,
+//     rating: 4.4,
+//     stock: 13
+//   }
+// ];
+// const list = document.querySelector(".product-list");
+// const input = document.querySelector(".product-input");
+// const btn = document.querySelector(".product-btn");
+
+// function productsRender(arr) {
+//   list.innerHTML = arr.map((el)=> {
+//     return `
+//     <li>
+//     <h3>${el.name}</h3>
+//     <p>${el.category}</p>
+//     <p>${el.price}</p>
+//     <p>${el.rating}</p>
+//     <p>${el.stock}</p>
+//     </li>
+//     `
+//   }).join("")
+// }
+// productsRender(products)
+
+// function textProduct(arr) {
+//   const value = input.value;
+//   const result = arr.map((el)=>{
+//     return  {
+//       ...el,
+//       name:  value
+
+//     }
+//   })
+//   productsRender(result)
+// }
+// btn.addEventListener("click", ()=> textProduct(products))
+
+// const products = [
+//   {
+//     id: 1,
+//     name: "Смартфон Samsung Galaxy S23",
+//     category: "electronics",
+//     price: 32000,
+//     rating: 4.7,
+//     stock: 12
+//   },
+//   {
+//     id: 2,
+//     name: "Ноутбук Apple MacBook Air M2",
+//     category: "electronics",
+//     price: 48000,
+//     rating: 4.9,
+//     stock: 7
+//   },
+//   {
+//     id: 3,
+//     name: "Игровая мышь Logitech G305",
+//     category: "accessories",
+//     price: 1900,
+//     rating: 4.6,
+//     stock: 25
+//   },
+//   {
+//     id: 4,
+//     name: "Стул офисный Ergonomic Pro",
+//     category: "furniture",
+//     price: 4500,
+//     rating: 4.3,
+//     stock: 9
+//   },
+//   {
+//     id: 5,
+//     name: "Кроссовки Nike Air Max",
+//     category: "clothing",
+//     price: 3200,
+//     rating: 4.5,
+//     stock: 15
+//   },
+//   {
+//     id: 6,
+//     name: "Футболка Puma Sport",
+//     category: "clothing",
+//     price: 850,
+//     rating: 4.1,
+//     stock: 40
+//   },
+//   {
+//     id: 7,
+//     name: "Телевизор LG OLED55",
+//     category: "electronics",
+//     price: 54000,
+//     rating: 4.8,
+//     stock: 4
+//   },
+//   {
+//     id: 8,
+//     name: "Кофейный столик Milano",
+//     category: "furniture",
+//     price: 2800,
+//     rating: 4.2,
+//     stock: 18
+//   },
+//   {
+//     id: 9,
+//     name: "Наушники Sony WH-1000XM5",
+//     category: "accessories",
+//     price: 17500,
+//     rating: 4.9,
+//     stock: 6
+//   },
+//   {
+//     id: 10,
+//     name: "Рюкзак Herschel Classic",
+//     category: "accessories",
+//     price: 2100,
+//     rating: 4.4,
+//     stock: 13
+//   }
+// ];
+// const list = document.querySelector(".product-list");
+// const input = document.querySelector(".product-input");
+// const btn = document.querySelector(".product-btn");
+// function productsRender(arr) {
+//   list.innerHTML = arr.map((el)=> {
+//     return `
+//     <li>
+//     <h3>${el.name}</h3>
+//     <p>${el.category}</p>
+//     <p>${el.price}</p>
+//     <p>${el.rating}</p>
+//     <p>${el.stock}</p>
+//     </li>
+//     `
+//   }).join("")
+// }
+// productsRender(products)
+
+// function productFilter(arr) {
+//   const value = input.value.toLowerCase();
+//   const result = arr.filter(el => el.category === value)
+//   productsRender(result)
+// }
+// btn.addEventListener("click", ()=> productFilter(products))
+
+// const input = document.querySelector(".square-input");
+// const btn = document.querySelector(".square-btn");
+// const div = document.querySelector(".square-box");
+// function create() {
+//   const value = input.value;
+//   div.style.width = value + "px"
+//   div.style.height = value + "px"
+// }
+// btn.addEventListener("click", ()=> create())
