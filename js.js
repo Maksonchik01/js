@@ -2413,3 +2413,20 @@
 //   div.style.height = value + "px"
 // }
 // btn.addEventListener("click", ()=> create())
+
+const div = document.querySelectorAll(".tabs-item");
+const btn = document.querySelectorAll(".tabs-btn");
+btn.forEach(button => {
+    button.addEventListener("click", ()=> {
+        btn.forEach(btn => btn.classList.remove("active"))
+        div.forEach(item => item.classList.remove("active"))
+        button.classList.add("active")
+        const targetId = button.getAttribute("data-target")
+        const targetContent = document.querySelector(targetId)
+        console.log(targetId);
+        console.log(targetContent);
+        
+        targetContent.classList.add("active")
+    })
+})
+
