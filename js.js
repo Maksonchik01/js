@@ -1396,7 +1396,7 @@
 //   div.innerHTML = arr.map((el)=> {
 //     return `
 //     <p>${el.age}</p>
-    
+
 //     `
 //   }).join("")
 // }
@@ -1413,7 +1413,6 @@
 //   { name: "Carrot", category: "vegetable" },
 //   { name: "Banana", category: "fruit" }
 // ];
-
 
 // const div = document.querySelector(".products")
 // const productsBtn = document.querySelector(".products-btn")
@@ -1441,7 +1440,7 @@
 // function renderNewProductBtn(arr) {
 //   const newProductsReduce = arr.reduce((acc, el)=> acc + el.price, 0) / arr.length
 //   const newProductsFilter = arr.filter(el => el.price >= newProductsReduce)
-//   newProducts.innerHTML = newProductsFilter.map((el)=> { 
+//   newProducts.innerHTML = newProductsFilter.map((el)=> {
 // return `
 // <p>${el.price}</p>
 // `
@@ -1680,7 +1679,6 @@
 // }
 // inputQuan.addEventListener("input", ()=> inputStock(products))
 
-
 // const products = [
 //   {
 //     id: 1,
@@ -1779,7 +1777,7 @@
 // </li>
 // `
 //   }).join("")
-// } 
+// }
 // productInputRender(products)
 //  function inputName(arr) {
 //   const inputValue = productInput.value.toLowerCase()
@@ -2175,7 +2173,7 @@
 //     `
 //   }).join("")
 // }
-// usersRender(users) 
+// usersRender(users)
 // function usersFilter (arr) {
 //   const value = input.value;
 //   const filter = arr.filter(el => el.age > value);
@@ -2414,19 +2412,52 @@
 // }
 // btn.addEventListener("click", ()=> create())
 
-const div = document.querySelectorAll(".tabs-item");
-const btn = document.querySelectorAll(".tabs-btn");
-btn.forEach(button => {
-    button.addEventListener("click", ()=> {
-        btn.forEach(btn => btn.classList.remove("active"))
-        div.forEach(item => item.classList.remove("active"))
-        button.classList.add("active")
-        const targetId = button.getAttribute("data-target")
-        const targetContent = document.querySelector(targetId)
-        console.log(targetId);
-        console.log(targetContent);
-        
-        targetContent.classList.add("active")
-    })
-})
+// const div = document.querySelectorAll(".tabs-item");
+// const btn = document.querySelectorAll(".tabs-btn");
+// btn.forEach(button => {
+//     button.addEventListener("click", ()=> {
+//         btn.forEach(btn => btn.classList.remove("active"))
+//         div.forEach(item => item.classList.remove("active"))
+//         button.classList.add("active")
+//         const targetId = button.getAttribute("data-target")
+//         const targetContent = document.querySelector(targetId)
+//         console.log(targetId);
+//         console.log(targetContent);
 
+//         targetContent.classList.add("active")
+//     })
+// })
+
+const form = document.querySelector(".form");
+const input = document.querySelector(".input");
+const popUp = document.querySelector(".pop-up");
+const btn = document.querySelector(".btn");
+const btnClose = document.querySelector(".close");
+const errorText = document.querySelector(".error");
+const sendBtn = document.querySelector(".send");
+function openPopUp() {
+  popUp.classList.add("active_pop-up");
+}
+btn.addEventListener("click", () => openPopUp());
+function closePopUp() {
+  popUp.classList.remove("active_pop-up");
+}
+btnClose.addEventListener("click", () => closePopUp());
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const value = input.value;
+  if (value.length < 8) {
+    errorText.textContent = "Номер телефону повинен бути не менше 8 символів";
+    return;
+  }
+  errorText.textContent = "";
+  input.value = "";
+  sendBtn.textContent = "Зареєстровано";
+  setTimeout(() => {
+    sendBtn.textContent = "Зареєструватися";
+  }, 2000);
+    setTimeout(() => {
+ closePopUp()
+  }, 3500);
+  
+});
