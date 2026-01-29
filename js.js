@@ -2428,36 +2428,279 @@
 //     })
 // })
 
-const form = document.querySelector(".form");
-const input = document.querySelector(".input");
-const popUp = document.querySelector(".pop-up");
-const btn = document.querySelector(".btn");
-const btnClose = document.querySelector(".close");
-const errorText = document.querySelector(".error");
-const sendBtn = document.querySelector(".send");
-function openPopUp() {
-  popUp.classList.add("active_pop-up");
+// const form = document.querySelector(".form");
+// const input = document.querySelector(".input");
+// const popUp = document.querySelector(".pop-up");
+// const btn = document.querySelector(".btn");
+// const btnClose = document.querySelector(".close");
+// const errorText = document.querySelector(".error");
+// const sendBtn = document.querySelector(".send");
+// function openPopUp() {
+//   popUp.classList.add("active_pop-up");
+// }
+// btn.addEventListener("click", () => openPopUp());
+// function closePopUp() {
+//   popUp.classList.remove("active_pop-up");
+// }
+// btnClose.addEventListener("click", () => closePopUp());
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const value = input.value;
+//   if (value.length < 8) {
+//     errorText.textContent = "Номер телефону повинен бути не менше 8 символів";
+//     return;
+//   }
+//   errorText.textContent = "";
+//   input.value = "";
+//   sendBtn.textContent = "Зареєстровано";
+//   setTimeout(() => {
+//     sendBtn.textContent = "Зареєструватися";
+//   }, 2000);
+//     setTimeout(() => {
+//  closePopUp()
+//   }, 3500);
+
+// });
+
+// const products = [
+//   {
+//     id: 1,
+//     name: "Смартфон Samsung Galaxy S23",
+//     category: "electronics",
+//     price: 32000,
+//     rating: 4.7,
+//     stock: 12
+//   },
+//   {
+//     id: 2,
+//     name: "Ноутбук Apple MacBook Air M2",
+//     category: "electronics",
+//     price: 48000,
+//     rating: 4.9,
+//     stock: 7
+//   },
+//   {
+//     id: 3,
+//     name: "Игровая мышь Logitech G305",
+//     category: "accessories",
+//     price: 1900,
+//     rating: 4.6,
+//     stock: 25
+//   },
+//   {
+//     id: 4,
+//     name: "Стул офисный Ergonomic Pro",
+//     category: "furniture",
+//     price: 4500,
+//     rating: 4.3,
+//     stock: 9
+//   },
+//   {
+//     id: 5,
+//     name: "Кроссовки Nike Air Max",
+//     category: "clothing",
+//     price: 3200,
+//     rating: 4.5,
+//     stock: 15
+//   },
+//   {
+//     id: 6,
+//     name: "Футболка Puma Sport",
+//     category: "clothing",
+//     price: 850,
+//     rating: 4.1,
+//     stock: 40
+//   },
+//   {
+//     id: 7,
+//     name: "Телевизор LG OLED55",
+//     category: "electronics",
+//     price: 54000,
+//     rating: 4.8,
+//     stock: 4
+//   },
+//   {
+//     id: 8,
+//     name: "Кофейный столик Milano",
+//     category: "furniture",
+//     price: 2800,
+//     rating: 4.2,
+//     stock: 18
+//   },
+//   {
+//     id: 9,
+//     name: "Наушники Sony WH-1000XM5",
+//     category: "accessories",
+//     price: 17500,
+//     rating: 4.9,
+//     stock: 6
+//   },
+//   {
+//     id: 10,
+//     name: "Рюкзак Herschel Classic",
+//     category: "accessories",
+//     price: 2100,
+//     rating: 4.4,
+//     stock: 13
+//   }
+// ];
+
+// const list = document.querySelector(".product-list");
+// const btn = document.querySelector(".product-btn");
+// const price = document.querySelector(".product-price");
+
+// function listRender (arr) {
+//   list.innerHTML = arr.map((el)=> {
+//     return `
+//     <li>
+//     <h3>${el.name}</h3>
+//     <p>${el.category}</p>
+//     <p>${el.price}</p>
+//     </li>
+//     `
+//   }).join("")
+// }
+// listRender (products)
+
+// function productSum(arr) {
+//   const productPrice = arr.reduce((acc, el)=> acc + (el.price * el.stock), 0)
+// price.textContent = productPrice;
+// }
+// btn.addEventListener("click", ()=> productSum(products))
+// const products = [
+//   {
+//     id: 1,
+//     name: "Смартфон Samsung Galaxy S23",
+//     category: "electronics",
+//     price: 32000,
+//     rating: 4.7,
+//     stock: 12
+//   },
+//   {
+//     id: 2,
+//     name: "Ноутбук Apple MacBook Air M2",
+//     category: "electronics",
+//     price: 48000,
+//     rating: 4.9,
+//     stock: 7
+//   },
+//   {
+//     id: 3,
+//     name: "Игровая мышь Logitech G305",
+//     category: "accessories",
+//     price: 1900,
+//     rating: 4.6,
+//     stock: 25
+//   },
+//   {
+//     id: 4,
+//     name: "Стул офисный Ergonomic Pro",
+//     category: "furniture",
+//     price: 4500,
+//     rating: 4.3,
+//     stock: 9
+//   },
+//   {
+//     id: 5,
+//     name: "Кроссовки Nike Air Max",
+//     category: "clothing",
+//     price: 3200,
+//     rating: 4.5,
+//     stock: 15
+//   },
+//   {
+//     id: 6,
+//     name: "Футболка Puma Sport",
+//     category: "clothing",
+//     price: 850,
+//     rating: 4.1,
+//     stock: 40
+//   },
+//   {
+//     id: 7,
+//     name: "Телевизор LG OLED55",
+//     category: "electronics",
+//     price: 54000,
+//     rating: 4.8,
+//     stock: 4
+//   },
+//   {
+//     id: 8,
+//     name: "Кофейный столик Milano",
+//     category: "furniture",
+//     price: 2800,
+//     rating: 4.2,
+//     stock: 18
+//   },
+//   {
+//     id: 9,
+//     name: "Наушники Sony WH-1000XM5",
+//     category: "accessories",
+//     price: 17500,
+//     rating: 4.9,
+//     stock: 6
+//   },
+//   {
+//     id: 10,
+//     name: "Рюкзак Herschel Classic",
+//     category: "accessories",
+//     price: 2100,
+//     rating: 4.4,
+//     stock: 13
+//   }
+// ];
+const list = document.querySelector(".list-rate");
+const btn = document.querySelector(".list-btn")
+// const btnHigh = document.querySelector(".high-rate");
+// const btnLow = document.querySelector(".low-rate");
+// function listRender(arr) {
+//   list.innerHTML = arr.map((el)=>{
+// return `
+// <li>
+// <h3>${el.name}</h3>
+// <p>${el.category}</p>
+// <p>${el.price}</p>
+// <p>${el.rating}</p>
+// </li>
+// `
+//   }).join("")
+// }
+// listRender(products)
+
+// function productSortHigh(arr) {
+//   const sortHigh = arr.sort((a, b)=> a.rating - b.rating)
+//   listRender(sortHigh)
+// }
+// function productSortLow(arr) {
+//   const sortLow = arr.sort((a, b)=> b.rating - a.rating)
+//   listRender(sortLow)
+// }
+// btnHigh.addEventListener("click", ()=> productSortHigh(products))
+// btnLow.addEventListener("click", ()=> productSortLow(products))
+let arr = []
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((res) => res.json())
+.then(data => {
+    list.innerHTML = data.map((el)=>{
+return `
+<li>
+<h3>${el.name}</h3>
+<p>${el.phone}</p>
+</li>
+`
+  }).join("")
+  arr = data
+})
+function upperCaseUsers(arr) {
+    list.innerHTML = arr.map((el)=>{
+return `
+<li>
+<h3>${el.name.toUpperCase()}</h3>
+<p>${el.phone}</p>
+</li>
+`
+  }).join("")
 }
-btn.addEventListener("click", () => openPopUp());
-function closePopUp() {
-  popUp.classList.remove("active_pop-up");
-}
-btnClose.addEventListener("click", () => closePopUp());
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const value = input.value;
-  if (value.length < 8) {
-    errorText.textContent = "Номер телефону повинен бути не менше 8 символів";
-    return;
-  }
-  errorText.textContent = "";
-  input.value = "";
-  sendBtn.textContent = "Зареєстровано";
-  setTimeout(() => {
-    sendBtn.textContent = "Зареєструватися";
-  }, 2000);
-    setTimeout(() => {
- closePopUp()
-  }, 3500);
-  
-});
+btn.addEventListener("click", ()=> upperCaseUsers(arr))
+
