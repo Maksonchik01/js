@@ -2677,30 +2677,63 @@ const btn = document.querySelector(".list-btn")
 // }
 // btnHigh.addEventListener("click", ()=> productSortHigh(products))
 // btnLow.addEventListener("click", ()=> productSortLow(products))
-let arr = []
+// let arr = []
 
-fetch("https://jsonplaceholder.typicode.com/users")
-.then((res) => res.json())
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then((res) => res.json())
+// .then(data => {
+//     list.innerHTML = data.map((el)=>{
+// return `
+// <li>
+// <h3>${el.name}</h3>
+// <p>${el.phone}</p>
+// </li>
+// `
+//   }).join("")
+//   arr = data
+// })
+// function upperCaseUsers(arr) {
+//     list.innerHTML = arr.map((el)=>{
+// return `
+// <li>
+// <h3>${el.name.toUpperCase()}</h3>
+// <p>${el.phone}</p>
+// </li>
+// `
+//   }).join("")
+// }
+// btn.addEventListener("click", ()=> upperCaseUsers(arr))
+const select = document.querySelector("#currency")
+let arr = [];
+fetch("https://fakestoreapi.com/products")
+.then ((res) => res.json())
 .then(data => {
-    list.innerHTML = data.map((el)=>{
-return `
-<li>
-<h3>${el.name}</h3>
-<p>${el.phone}</p>
-</li>
-`
+  list.innerHTML = data.map((el)=> {
+    return `
+    <li>
+    <img src="${el.image}" alt="">
+    <h3>${el.title}</h3>
+    <p>${el.price}</p>
+    <p>${el.category}</p>
+
+    </li>
+    `
   }).join("")
   arr = data
 })
-function upperCaseUsers(arr) {
-    list.innerHTML = arr.map((el)=>{
-return `
-<li>
-<h3>${el.name.toUpperCase()}</h3>
-<p>${el.phone}</p>
-</li>
-`
-  }).join("")
-}
-btn.addEventListener("click", ()=> upperCaseUsers(arr))
+function exchangeProduct(arr) {
+  const option = Number(select.value)
+    list.innerHTML = arr.map((el)=> {
+    return `
+    <li>
+    <img src="${el.image}" alt="">
+    <h3>${el.title}</h3>
+    <p>${(el.price / option).toFixed(2)}</p>
+    <p>${el.category}</p>
 
+    </li>
+    `
+  }).join("")
+
+}
+select.addEventListener("change", ()=> exchangeProduct(arr))
