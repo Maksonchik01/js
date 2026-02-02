@@ -2703,37 +2703,37 @@ const btn = document.querySelector(".list-btn")
 //   }).join("")
 // }
 // btn.addEventListener("click", ()=> upperCaseUsers(arr))
-const select = document.querySelector("#currency")
-let arr = [];
-fetch("https://fakestoreapi.com/products")
-.then ((res) => res.json())
-.then(data => {
-  list.innerHTML = data.map((el)=> {
-    return `
-    <li>
-    <img src="${el.image}" alt="">
-    <h3>${el.title}</h3>
-    <p>${el.price}</p>
-    <p>${el.category}</p>
+// const select = document.querySelector("#currency")
+// let arr = [];
+// fetch("https://fakestoreapi.com/products")
+// .then ((res) => res.json())
+// .then(data => {
+//   list.innerHTML = data.map((el)=> {
+//     return `
+//     <li>
+//     <img src="${el.image}" alt="">
+//     <h3>${el.title}</h3>
+//     <p>${el.price}</p>
+//     <p>${el.category}</p>
 
-    </li>
-    `
-  }).join("")
-  arr = data
-})
-function exchangeProduct(arr) {
-  const option = Number(select.value)
-    list.innerHTML = arr.map((el)=> {
-    return `
-    <li>
-    <img src="${el.image}" alt="">
-    <h3>${el.title}</h3>
-    <p>${(el.price / option).toFixed(2)}</p>
-    <p>${el.category}</p>
+//     </li>
+//     `
+//   }).join("")
+//   arr = data
+// })
+// function exchangeProduct(arr) {
+//   const option = Number(select.value)
+//     list.innerHTML = arr.map((el)=> {
+//     return `
+//     <li>
+//     <img src="${el.image}" alt="">
+//     <h3>${el.title}</h3>
+//     <p>${(el.price / option).toFixed(2)}</p>
+//     <p>${el.category}</p>
 
-    </li>
-    `
-  }).join("")
+//     </li>
+//     `
+//   }).join("")
 
-}
-select.addEventListener("change", ()=> exchangeProduct(arr))
+// }
+// select.addEventListener("change", ()=> exchangeProduct(arr))
