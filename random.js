@@ -214,30 +214,98 @@
 //   btn.addEventListener("click", ()=> deleteId(arr))
 
 
-const btn = document.querySelector(".btn")
-const list = document.querySelector(".list")
+// const btn = document.querySelector(".btn")
+// const list = document.querySelector(".list")
+// const products = [
+//   { id: 1, name: "Чехол", price: 20 },
+//   { id: 2, name: "Монитор", price: 300 },
+//   { id: 3, name: "Кресло", price: 250 },
+//   { id: 4, name: "Наушники", price: 120 },
+//   { id: 5, name: "Зарядка", price: 300 }
+// ];
+// function listRender(arr) {
+//     list.innerHTML = arr.map((el)=> {
+//         return `
+//         <li>
+//         <p> ${el.id}</p>
+//         <h3>${el.name}</h3>
+//         <p>${el.price}</p>
+//         </li>
+//         `
+//     }).join("")
+// }
+// listRender(products)
+
+// function sliceProduct(arr) {
+//     const productSlice = arr.sort((a, b) => b.price - a.price).slice(0, 3)
+//     listRender(productSlice)
+// }
+// btn.addEventListener("click", ()=> sliceProduct(products))
+
 const products = [
-  { id: 1, name: "Чехол", price: 20 },
-  { id: 2, name: "Монитор", price: 300 },
-  { id: 3, name: "Кресло", price: 250 },
-  { id: 4, name: "Наушники", price: 120 },
-  { id: 5, name: "Зарядка", price: 300 }
+  { id: 1, name: "Смартфон", price: 500, category: "Электроника", inStock: true },
+  { id: 2, name: "Ноутбук", price: 1200, category: "Электроника", inStock: false },
+  { id: 3, name: "Кофемашина", price: 300, category: "Техника", inStock: true },
+  { id: 4, name: "Книга", price: 20, category: "Хобби", inStock: true },
+  { id: 5, name: "Велосипед", price: 450, category: "Спорт", inStock: true }
 ];
+
+const list = document.querySelector(".list")
+const listNumber = document.querySelector(".listNumber")
+const input = document.querySelector(".input")
+const btn = document.querySelector(".btn")
+const checkBox = document.querySelector(".checkbox")
+const categoryBtn = document.querySelector(".category-btn")
 function listRender(arr) {
-    list.innerHTML = arr.map((el)=> {
+    list.innerHTML = arr.map((el)=>{
         return `
         <li>
-        <p> ${el.id}</p>
         <h3>${el.name}</h3>
         <p>${el.price}</p>
+        <p> ${el.category}</p>
+        <p> ${el.inStock}</p>
         </li>
         `
     }).join("")
 }
 listRender(products)
 
-function sliceProduct(arr) {
-    const productSlice = arr.sort((a, b) => b.price - a.price).slice(0, 3)
-    listRender(productSlice)
+function filterProducts(arr) {
+    const inputVal = input.value.toLowerCase()
+    const filterProduct = arr.filter(el => el.name.toLowerCase().includes(inputVal))
+    listRender(filterProduct)
 }
-btn.addEventListener("click", ()=> sliceProduct(products))
+input.addEventListener("input", ()=> filterProducts(products))
+
+function discountProduct(arr) {
+    const discountPrice = arr.map(el => ({
+        ...el,
+        price: el.price - el.price * 0.15
+    })) 
+    listRender(discountPrice)
+}
+btn.addEventListener("click", ()=> discountProduct(products))
+
+function filterCheck(arr) {
+    if (checkBox.checked === true) {
+        const filterStock = arr.filter(el => el.inStock === checkBox.checked)
+    listRender(filterStock)
+    }else{
+        listRender(products)
+    }
+}
+checkBox.addEventListener("change", ()=> filterCheck(products))
+
+function category(arr) {
+    const productCategory = arr.map(el => el.category)
+    const result = [...new Set (productCategory)]
+    listNumber.innerHTML = result.map((el)=>{
+        return `
+              <li>
+${el}
+        </li>
+        `
+
+    }).join("")
+}
+categoryBtn.addEventListener("click", ()=> category(products))
