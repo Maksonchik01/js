@@ -2649,8 +2649,8 @@
 //     stock: 13
 //   }
 // ];
-const list = document.querySelector(".list-rate");
-const btn = document.querySelector(".list-btn")
+// const list = document.querySelector(".list-rate");
+// const btn = document.querySelector(".list-btn")
 // const btnHigh = document.querySelector(".high-rate");
 // const btnLow = document.querySelector(".low-rate");
 // function listRender(arr) {
