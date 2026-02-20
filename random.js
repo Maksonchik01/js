@@ -349,14 +349,20 @@ const list = document.querySelector(".list")
 fetch("https://jsonplaceholder.typicode.com/users")
 .then(response => response.json())
 .then(data => {
-    const users = data.
+    const usersId = data.filter(el => el.id % 2 === 0)
+    list.innerHTML = usersId.map((el)=>{
+        return `
+        <h3>${el.name}</h3>
+        `
+    }).join("")
 })
-
-
-
-
-
-
-
-
-fetch("https://jsonplaceholder.typicode.com/posts")
+// fetch("https://jsonplaceholder.typicode.com/posts")
+// .then(response => response.json())
+// .then(data => {
+//     const postId = data.filter(el => el.id % 2 === 0)
+//     list.innerHTML = postId.map((el)=>{
+//         return `
+//         <p>${el.body}</p>
+//         `
+//     }).join("")
+// })
