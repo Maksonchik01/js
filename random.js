@@ -345,24 +345,96 @@
 //         `
 //     }).join("")
 // })
-const list = document.querySelector(".list")
-fetch("https://jsonplaceholder.typicode.com/users")
-.then(response => response.json())
-.then(data => {
-    const usersId = data.filter(el => el.id % 2 === 0)
-    list.innerHTML = usersId.map((el)=>{
-        return `
-        <h3>${el.name}</h3>
-        `
-    }).join("")
-})
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(response => response.json())
+// .then(data => {
+//     const usersId = data.filter(el => el.id % 2 === 0)
+//     list.innerHTML = usersId.map((el)=>{
+//         return `
+//         <h3>${el.name}</h3>
+//         `
+//     }).join("")
+// })
 // fetch("https://jsonplaceholder.typicode.com/posts")
 // .then(response => response.json())
 // .then(data => {
 //     const postId = data.filter(el => el.id % 2 === 0)
-//     list.innerHTML = postId.map((el)=>{
+//     list.innerHTML += postId.map((el)=>{
 //         return `
 //         <p>${el.body}</p>
 //         `
 //     }).join("")
 // })
+const list = document.querySelector(".list")
+const btn = document.querySelector(".btn")
+const input = document.querySelector(".input")
+const btnRating = document.querySelector(".btn-rating")
+// fetch("https://fakestoreapi.com/products")
+// .then(response => response.json())
+// .then(data => {
+    // list.innerHTML = data.map((el)=>{
+    //     return `
+    //     <h3>${el.title}</h3>
+    //     <p>${el.price}</p>
+    //     <p>${el.category}</p>
+    //     `
+    // }).join("")
+// })
+async function getProducts() {
+    const url = await fetch ("https://fakestoreapi.com/products")
+    const data = await url.json()
+    return data 
+}
+async function renderProducts(){
+    const array = await getProducts()
+     list.innerHTML = array.map((el)=>{
+        return `
+        <h3>${el.title}</h3>
+        <p>${el.price}</p>
+        <p>${el.category}</p>
+        `
+    }).join("")
+}
+renderProducts()
+async function sortPrice() {
+    const filterProduct = await getProducts()
+    const id = filterProduct.filter(el => el.id % 2 === 0)
+         list.innerHTML = id.map((el)=>{
+        return `
+        <h3>${el.title}</h3>
+        <p>${el.price}</p>
+        <p>${el.category}</p>
+        `
+    }).join("")
+}
+btn.addEventListener("click", ()=> sortPrice())
+
+async function filterCategory() {
+    const category = await getProducts()
+    const value = input.value
+    const filteredCategory = category.filter(el => el.category.toLowerCase() === value.toLowerCase())
+         list.innerHTML = filteredCategory.map((el)=>{
+        return `
+        <h3>${el.title}</h3>
+        <p>${el.price}</p>
+        <p>${el.category}</p>
+        `
+    }).join("")
+}
+input.addEventListener("change", ()=> filterCategory())
+
+async function rateProduct() {
+    const rating = await getProducts()
+    const allRatings = rating.map(el => el.rating.rate)
+const mathRating = Math.max(...allRatings )
+const filteredRating = rating.filter(el => el.rating.rate === mathRating)
+         list.innerHTML = filteredRating.map((el)=>{
+        return `
+        <h3>${el.title}</h3>
+        <p>${el.price}</p>
+        <p>${el.category}</p>
+        <p>${el.rating.rate}</p>
+        `
+    }).join("")
+}
+btnRating.addEventListener("click", ()=> rateProduct())
