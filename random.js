@@ -365,10 +365,10 @@
 //         `
 //     }).join("")
 // })
-const list = document.querySelector(".list")
-const btn = document.querySelector(".btn")
-const input = document.querySelector(".input")
-const btnRating = document.querySelector(".btn-rating")
+// const list = document.querySelector(".list")
+// const btn = document.querySelector(".btn")
+// const input = document.querySelector(".input")
+// const btnRating = document.querySelector(".btn-rating")
 // fetch("https://fakestoreapi.com/products")
 // .then(response => response.json())
 // .then(data => {
@@ -380,61 +380,117 @@ const btnRating = document.querySelector(".btn-rating")
     //     `
     // }).join("")
 // })
+// async function getProducts() {
+//     const url = await fetch ("https://fakestoreapi.com/products")
+//     const data = await url.json()
+//     return data 
+// }
+// async function renderProducts(){
+//     const array = await getProducts()
+//      list.innerHTML = array.map((el)=>{
+//         return `
+//         <h3>${el.title}</h3>
+//         <p>${el.price}</p>
+//         <p>${el.category}</p>
+//         `
+//     }).join("")
+// }
+// renderProducts()
+// async function sortPrice() {
+//     const filterProduct = await getProducts()
+//     const id = filterProduct.filter(el => el.id % 2 === 0)
+//          list.innerHTML = id.map((el)=>{
+//         return `
+//         <h3>${el.title}</h3>
+//         <p>${el.price}</p>
+//         <p>${el.category}</p>
+//         `
+//     }).join("")
+// }
+// btn.addEventListener("click", ()=> sortPrice())
+
+// async function filterCategory() {
+//     const category = await getProducts()
+//     const value = input.value
+//     const filteredCategory = category.filter(el => el.category.toLowerCase() === value.toLowerCase())
+//          list.innerHTML = filteredCategory.map((el)=>{
+//         return `
+//         <h3>${el.title}</h3>
+//         <p>${el.price}</p>
+//         <p>${el.category}</p>
+//         `
+//     }).join("")
+// }
+// input.addEventListener("change", ()=> filterCategory())
+
+// async function rateProduct() {
+//     const rating = await getProducts()
+//     const allRatings = rating.map(el => el.rating.rate)
+// const mathRating = Math.max(...allRatings )
+// const filteredRating = rating.filter(el => el.rating.rate === mathRating)
+//          list.innerHTML = filteredRating.map((el)=>{
+//         return `
+//         <h3>${el.title}</h3>
+//         <p>${el.price}</p>
+//         <p>${el.category}</p>
+//         <p>${el.rating.rate}</p>
+//         `
+//     }).join("")
+// }
+// btnRating.addEventListener("click", ()=> rateProduct())
+
 async function getProducts() {
     const url = await fetch ("https://fakestoreapi.com/products")
     const data = await url.json()
-    return data 
+    return data
 }
-async function renderProducts(){
-    const array = await getProducts()
-     list.innerHTML = array.map((el)=>{
-        return `
-        <h3>${el.title}</h3>
-        <p>${el.price}</p>
-        <p>${el.category}</p>
-        `
-    }).join("")
+const list = document.querySelector(".list")
+const btn = document.querySelector(".btn")
+async function renderProducts() {
+    const product = await getProducts()
+list.innerHTML = product.map((el)=>{
+    return `
+    <li>
+    <h3>${el.title}</h3>
+    <p>${el.price}</p>
+    <p>${el.category}</p>
+    <p>${el.rating.count}</p>
+    </li>
+    `
+}).join("")
+    
 }
 renderProducts()
-async function sortPrice() {
-    const filterProduct = await getProducts()
-    const id = filterProduct.filter(el => el.id % 2 === 0)
-         list.innerHTML = id.map((el)=>{
-        return `
-        <h3>${el.title}</h3>
-        <p>${el.price}</p>
-        <p>${el.category}</p>
-        `
-    }).join("")
-}
-btn.addEventListener("click", ()=> sortPrice())
 
-async function filterCategory() {
-    const category = await getProducts()
-    const value = input.value
-    const filteredCategory = category.filter(el => el.category.toLowerCase() === value.toLowerCase())
-         list.innerHTML = filteredCategory.map((el)=>{
-        return `
-        <h3>${el.title}</h3>
-        <p>${el.price}</p>
-        <p>${el.category}</p>
-        `
-    }).join("")
-}
-input.addEventListener("change", ()=> filterCategory())
+// async function filterProduct() {
+//     const product = await getProducts()
+//     const filterTitle = product.filter(el => el.title.length > 50)
+//     list.innerHTML = filterTitle.map((el)=>{
+//     return `
+//     <li>
+//     <h3>${el.title}</h3>
+//     <p>${el.price}</p>
+//     <p>${el.category}</p>
+//     </li>
+//     `
+// }).join("")
+// }
+// btn.addEventListener("click", ()=> filterProduct())
 
-async function rateProduct() {
-    const rating = await getProducts()
-    const allRatings = rating.map(el => el.rating.rate)
-const mathRating = Math.max(...allRatings )
-const filteredRating = rating.filter(el => el.rating.rate === mathRating)
-         list.innerHTML = filteredRating.map((el)=>{
-        return `
-        <h3>${el.title}</h3>
-        <p>${el.price}</p>
-        <p>${el.category}</p>
-        <p>${el.rating.rate}</p>
-        `
-    }).join("")
+async function countProduct() {
+    const product = await getProducts()
+const count = product.map(el => el.rating.count)
+const countMath = Math.max(...count)
+const filterProduct = product.filter(el => el.rating.count === countMath)
+list.innerHTML = filterProduct.map((el)=>{
+    return `
+    <li>
+    <h3>${el.title}</h3>
+    <p>${el.price}</p>
+    <p>${el.category}</p>
+    <p>${el.rating.count}</p>
+    </li>
+    `
+}).join("")
 }
-btnRating.addEventListener("click", ()=> rateProduct())
+btn.addEventListener("click", ()=> countProduct())
